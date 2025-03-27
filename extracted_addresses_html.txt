@@ -1,0 +1,89 @@
+99257_order_cleaned.txt: 202 Knights Griffin Rd Plant City, FL 33565 501 Half Mile Rd Plant City, FL 33565 3306 N Wilder Rd Plant City, FL 33563 3910 N Wilder Rd Plant City, FL 33565 5004 E Knights Griffin Rd, Plant City, FL 33565 4404 W Knights Griffin Rd Plant City, FL 33565 9211 Kathleen Rd Lakeland, FL 33810
+99257_order_cleaned.txt: 6 Merrion Rd Lakeland, FL 33810 3838 Fancy Farms Rd Plant City, Fl 33566 5212 Drane Field Rd Plant City, Fl 33566 4109 Futeh Loop Plant City, FL 33566 5112 Mud Lake Rd Plant City, FL 33567 416 Jerry Smith Rd Dover, FL 33527
+99257_order_cleaned.txt: 2702 W Knights Griffin Rd Plant City, FL 33562 2706 W Knights Griffin Re Plant City, FL 33562 Ranch Camp Loop Plant City, FL 33565 102 Kaysville Rd Lithia, FL 33547
+99257_order_cleaned.txt: 107 East Madison Street Tallahassee, FL 32399
+99257_order_cleaned.txt: 5102 Miley Rd Plant City, FL 33565
+99257_order_cleaned.txt: 4407 Spotted Horse Lane Plant City, FL 33565
+99257_order_cleaned.txt: 5021 W Knights Griffin Rd Plant City, FL 33565
+99257_order_cleaned.txt: 3970 N Wilder Rd Plant City, FL 33565
+99257_order_cleaned.txt: 3306 N Wilder Rd Plant City, FL 33565
+99257_order_cleaned.txt: 1007 W Sam Allen Rd Plant City, FL 33565
+99257_order_cleaned.txt: 402 Bob Head Rd Plant City, FL 33565
+99257_order_cleaned.txt: 3010 N Frontage Rd Plant City, FL 33565
+99257_order_cleaned.txt: 1006 Williams Rd Plant City, FL 33585
+99257_order_cleaned.txt: 3850 W Knights Griffin Rd Plant City, FL 33565
+99257_order_cleaned.txt: 501 Half Mile Rd Plant City, FL 33565
+99257_order_cleaned.txt: 5004 Knights Griffin Rd Plant City, FL 33565
+99257_order_cleaned.txt: 4404 W Knights Griffin Rd Plant City, FL 33565
+99257_order_cleaned.txt: 4004 Forbes Rd Plant City, FL 33565
+99257_order_cleaned.txt: 2905 E Albritton Rd Plant City, FL 33565
+99257_order_cleaned.txt: 2301 Leaning Pine Lane Plant City, FL 33565
+99257_order_cleaned.txt: 3838 Fancy Ferms Rd Plant City, FL 33566
+99257_order_cleaned.txt: 2605 Medulla Rd Plant City, FL 33566
+99257_order_cleaned.txt: 5212 Drane Field Rd Plant City, FL 33566
+99257_order_cleaned.txt: 5112 Mud Lake Rd Plant City, FL 33567
+99257_order_cleaned.txt: 416 Jerry Smith Rd Dover, FL 33527
+99257_order_cleaned.txt: 4401 Spotted Horse Lane Plant City, FL 33565
+99257_order_cleaned.txt: 2905 E Albritton Rd Plant City, FL 33563
+99257_order_cleaned.txt: 5021 W Knights Griffin Rd Plant City, FL 33565
+99257_order_cleaned.txt: 1007 W Sam Allen Rd Plant City, FL 33565
+99257_order_cleaned.txt: 3010 N Frontage Rd Plant City, FL 33565
+99257_order_cleaned.txt: 1006 Witiems Rd Plant City, FL 33565
+99257_order_cleaned.txt: 3860 W Knights Griffin Rd Plant City, FL 33565
+99257_order_cleaned.txt: 202 Knights Griffin Rd Plant City, FL 33565
+99257_order_cleaned.txt: 5004 Knights Griffin Rd Plant City, FL 33565
+99257_order_cleaned.txt: 4404 W Knights Griffin Rd Plant City, FL 33565
+99257_order_cleaned.txt: 4004 Forbes Rd Plant City, FL 33565
+99257_order_cleaned.txt: 3208 Lampp Rd Plant City, FL 33565
+99257_order_cleaned.txt: 2905 E Albritton Rd Plant City, FL 33565
+99257_order_cleaned.txt: 2307 Leaning Pine Lane Plant City, FL 33565
+99257_order_cleaned.txt: 3838 Fancy Farms Rd Plant City, FL 33566
+99257_order_cleaned.txt: 2605 Medulla Rd Plant City, FL 33566
+99257_order_cleaned.txt: 5212 Drane Field Rd Plant City, FL 33566
+99257_order_cleaned.txt: 1709 Futch Loop Plant City, FL 33566 5772 Mud Lake Rd Plant City, FL 33567
+99257_order_cleaned.txt: 202 Knights Griffin Rd Plant City, FL 33565
+99257_order_cleaned.txt: 501 Half Mile Rd Plant City, FL 33565 3306 N Wilder Rd Piant City, FL 33563
+99257_order_cleaned.txt: 3910 N Wilder Rd Plant City, FL 33565
+99257_order_cleaned.txt: 4404 W Knights Griffin Rd Plant City, FL 23565
+99257_order_cleaned.txt: 4550 58 Merrion Rd Lakeland, FL 33810
+99257_order_cleaned.txt: 5112 Mud Lake Rd Piant City, FL 33567 416 Jerry Smith Rd Dever, FL 33527
+99257_order_cleaned.txt: 4404 W Knights Griffin Rd Plant City, FL 33565
+99257_order_cleaned.txt: 416 Jerry Smith Rd Dover, FL 33527 12929 Hobson Simmons Rd Lithia, FL 33547
+99257_order_cleaned.txt: 8 Merrion Rd Lakeland, FL 33810 416 Jerry Smith Rd Dover, Fl 33527 12929 Hobson Simmons Rd Lithia, FL 33547
+99257_order_cleaned.txt: 501 Haif Mile Rd Plant City, FL 33565 5112 Mud Lake Rd Plant City, FL 33567
+99257_order_cleaned.txt: 9211 Kathleen Rd Lakeland, FL 33810
+99257_order_cleaned.txt: 455058 Merrion Rd Lakeland, FL 33810 416 Jerry Smith Rd Dover, FL 33527 12929 Hobson Simmons Rd Lithla, FL 33547
+99257_order_cleaned.txt: 504 Half Mile Rd Plant City, FL33565 3306 N Wilder Rd Plant City, FL 33563
+99257_order_cleaned.txt: 3910 N Wilder Rd Plant City, FL 33565
+99257_order_cleaned.txt: 4404 W Knights Griffin Rd Plant City, FL 33565 9211 Kathleen Rd Lakeland, FL 33810
+99257_order_cleaned.txt: 4550 SB Merrion Rd Lakeland, FL 33810
+99257_order_cleaned.txt: 5212 Mud Lake Rd Plant City, Fl 33567 416 Jerry Smith Rd Dover, FL 33527 12929 Hobson Simmons Rd Lithia, FL 33547
+115829_order_cleaned.txt: 15720 West Lake Drive VWimauma, FI 33596
+115829_order_cleaned.txt: 11 West Quincy Court Chicago, IL 60604
+115969_order_cleaned.txt: 24 MSC G-300, Caldwell Bullding 107 East Madison Street Tallahassee, FL 32739
+115969_order_cleaned.txt: 202 Knights Griffin Rd Plant City, FL 33565
+115969_order_cleaned.txt: 01 Half Mile Rd Plant City, FL 33565
+115969_order_cleaned.txt: 3910 N Wilder Rd Plant City, FL 33565
+115969_order_cleaned.txt: 4404 W Knights Griffin Rd Plant City, FL 33565 9211 Kathleen Rd Lakeland, FL 33810
+115969_order_cleaned.txt: 416 Jerry Smith Rd Oover, FL 33527
+115969_order_cleaned.txt: 6219 Yukon Rd. Dover FL 7914 Lewis Rd Dover, FL 33527
+115969_order_cleaned.txt: 202 Knights Griffin Rd Plant City, FL 33565
+115969_order_cleaned.txt: 501 Half Mile Rd Plant City, FL 33565 3306 N Wilder Rd Plant City, FL 33563
+115969_order_cleaned.txt: 4404 W Knights Griffin Rd Plant City, FL 33565 9211 Kathleen Rd Lakeland, FL 33310
+115969_order_cleaned.txt: 4550 58 Merrion Rd Lakeland, FL 33810 5112 Mud Lake Rd Plant City, FL 33567
+115969_order_cleaned.txt: 416 terry Smith Rd Dover, FL 33527
+115969_order_cleaned.txt: 9211 Kathleen Rd Lakeland, FL 33810
+115969_order_cleaned.txt: 4550 5B Merrion Rd Lakeland, FL 33810 416 Jerry Smith Rd Gover, FL 33527
+115969_order_cleaned.txt: 12929 Hobson Simmons Rd Lithia, Ft 33547 2914 Lewis Rd Dover, FL 33527
+115969_order_cleaned.txt: 112 Mud Lake Rd Plant City, FL 33567
+115969_order_cleaned.txt: 9211 Kathieen Rd Lakeland, FL 33810
+115969_order_cleaned.txt: 4550 58 Merrion Rd Lakeland, FL 33810 416 Jerry Smith Rd Dover, FL 33527
+115969_order_cleaned.txt: 12929 Hobson Simmons Rd Lithia, FL 33547
+115969_order_cleaned.txt: 202 Knights Griffin Rd Plant City, FL 33565
+115969_order_cleaned.txt: 501 Half Mile Rd Plant City, FL 33565 3306 N Wilder Rd Plant City, FL 33563
+115969_order_cleaned.txt: 3910 N Wilder Rd Plant City, FL 33565
+115969_order_cleaned.txt: 4404 W Knights Griffin Rd Plant City, FL 33565 9211 Kathleen Rd Lakeland, FL 33810
+115969_order_cleaned.txt: 4550 58 Merrion Rd Lakeland, FL 33810
+115969_order_cleaned.txt: 5112 Mud Lake Rd Plant City, FL 33567 416 Jerry Smith Rd Dover, FL 33527
+115969_order_cleaned.txt: 12929 Hobson Simmons Rd Lithia, FL 33547 2914 Lewis Rd Dover, FL 33527
+117179_order_cleaned.txt: 40 workers that are working in Concordia, LEC and Worth Gin Co, Inc are ta be housed in N Gordy Rd Rebecca, GA 31783

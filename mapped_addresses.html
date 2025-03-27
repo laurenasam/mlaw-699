@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_019edba6cd5cefc2f85579274c36c041 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_019edba6cd5cefc2f85579274c36c041" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_019edba6cd5cefc2f85579274c36c041 = L.map(
+                "map_019edba6cd5cefc2f85579274c36c041",
+                {
+                    center: [33.737467659552536, -92.15625805669953],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_447e63ae4822564fbb448dddb4a9243e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_447e63ae4822564fbb448dddb4a9243e.addTo(map_019edba6cd5cefc2f85579274c36c041);
+        
+    
+            var marker_ca29735bfdc9d21ef8089621e6e212d5 = L.marker(
+                [31.518453285714283, -82.8419796122449],
+                {}
+            ).addTo(map_019edba6cd5cefc2f85579274c36c041);
+        
+    
+        var popup_a540817a9def2ff4b568b7e7682de26b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e99ddabc84bfa45da273b967604be5ca = $(`<div id="html_e99ddabc84bfa45da273b967604be5ca" style="width: 100.0%; height: 100.0%;">1002 Smith Ave Douglas Georgia 31533</div>`)[0];
+                popup_a540817a9def2ff4b568b7e7682de26b.setContent(html_e99ddabc84bfa45da273b967604be5ca);
+            
+        
+
+        marker_ca29735bfdc9d21ef8089621e6e212d5.bindPopup(popup_a540817a9def2ff4b568b7e7682de26b)
+        ;
+
+        
+    
+    
+            marker_ca29735bfdc9d21ef8089621e6e212d5.bindTooltip(
+                `<div>
+                     1002 Smith Ave Douglas Georgia 31533
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b3e5baffd4bf1bc4313d44566d6cd32e = L.marker(
+                [31.518453285714283, -82.8419796122449],
+                {}
+            ).addTo(map_019edba6cd5cefc2f85579274c36c041);
+        
+    
+        var popup_b2f9de9db1b43f52f4464dab94722960 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f29ea5884a91dc1fa17b21f259cc0c17 = $(`<div id="html_f29ea5884a91dc1fa17b21f259cc0c17" style="width: 100.0%; height: 100.0%;">1002 Smith Ave. Douglas Georgia 31533</div>`)[0];
+                popup_b2f9de9db1b43f52f4464dab94722960.setContent(html_f29ea5884a91dc1fa17b21f259cc0c17);
+            
+        
+
+        marker_b3e5baffd4bf1bc4313d44566d6cd32e.bindPopup(popup_b2f9de9db1b43f52f4464dab94722960)
+        ;
+
+        
+    
+    
+            marker_b3e5baffd4bf1bc4313d44566d6cd32e.bindTooltip(
+                `<div>
+                     1002 Smith Ave. Douglas Georgia 31533
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ddcf9d7df7b3797831c5540776cd5144 = L.marker(
+                [36.05524095, -102.50050308290405],
+                {}
+            ).addTo(map_019edba6cd5cefc2f85579274c36c041);
+        
+    
+        var popup_360045aaa74cba211f533011ad440805 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_521ff7ec0ee1c205005bc6c8527251b8 = $(`<div id="html_521ff7ec0ee1c205005bc6c8527251b8" style="width: 100.0%; height: 100.0%;">1104 Maynard Ave. Dalhart Texas 79022</div>`)[0];
+                popup_360045aaa74cba211f533011ad440805.setContent(html_521ff7ec0ee1c205005bc6c8527251b8);
+            
+        
+
+        marker_ddcf9d7df7b3797831c5540776cd5144.bindPopup(popup_360045aaa74cba211f533011ad440805)
+        ;
+
+        
+    
+    
+            marker_ddcf9d7df7b3797831c5540776cd5144.bindTooltip(
+                `<div>
+                     1104 Maynard Ave. Dalhart Texas 79022
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_064efb23b041741bb6d4fe942b499c69 = L.marker(
+                [36.06523145, -102.5214354998993],
+                {}
+            ).addTo(map_019edba6cd5cefc2f85579274c36c041);
+        
+    
+        var popup_7f9f249c1ec10e72ad9c267c7e26b93e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_37d27147d6f476e30f07668258eb0ecb = $(`<div id="html_37d27147d6f476e30f07668258eb0ecb" style="width: 100.0%; height: 100.0%;">123 Liberal Street Dalhart, Texas 79022</div>`)[0];
+                popup_7f9f249c1ec10e72ad9c267c7e26b93e.setContent(html_37d27147d6f476e30f07668258eb0ecb);
+            
+        
+
+        marker_064efb23b041741bb6d4fe942b499c69.bindPopup(popup_7f9f249c1ec10e72ad9c267c7e26b93e)
+        ;
+
+        
+    
+    
+            marker_064efb23b041741bb6d4fe942b499c69.bindTooltip(
+                `<div>
+                     123 Liberal Street Dalhart, Texas 79022
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e424389e004fc4871b7fc6447d18d3ab = L.marker(
+                [40.57461906122449, -102.302653],
+                {}
+            ).addTo(map_019edba6cd5cefc2f85579274c36c041);
+        
+    
+        var popup_90cb6d5e5952aeea6d090fd1b4d7c6f2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f8784c3c191e61655329e55bf6f7445 = $(`<div id="html_3f8784c3c191e61655329e55bf6f7445" style="width: 100.0%; height: 100.0%;">1250 Interocean Drive Holyoke Colorado 80734</div>`)[0];
+                popup_90cb6d5e5952aeea6d090fd1b4d7c6f2.setContent(html_3f8784c3c191e61655329e55bf6f7445);
+            
+        
+
+        marker_e424389e004fc4871b7fc6447d18d3ab.bindPopup(popup_90cb6d5e5952aeea6d090fd1b4d7c6f2)
+        ;
+
+        
+    
+    
+            marker_e424389e004fc4871b7fc6447d18d3ab.bindTooltip(
+                `<div>
+                     1250 Interocean Drive Holyoke Colorado 80734
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1db5e4b276ee9c453474ab7dd578b306 = L.marker(
+                [31.9365917, -81.9284501],
+                {}
+            ).addTo(map_019edba6cd5cefc2f85579274c36c041);
+        
+    
+        var popup_30e2e2509bb4f663c09cc962f12cdbd5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_81be27d9f45c7be4f616b322cba57c79 = $(`<div id="html_81be27d9f45c7be4f616b322cba57c79" style="width: 100.0%; height: 100.0%;">20 Glennville Georgia 30427</div>`)[0];
+                popup_30e2e2509bb4f663c09cc962f12cdbd5.setContent(html_81be27d9f45c7be4f616b322cba57c79);
+            
+        
+
+        marker_1db5e4b276ee9c453474ab7dd578b306.bindPopup(popup_30e2e2509bb4f663c09cc962f12cdbd5)
+        ;
+
+        
+    
+    
+            marker_1db5e4b276ee9c453474ab7dd578b306.bindTooltip(
+                `<div>
+                     20 Glennville Georgia 30427
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f272d086518debd995ab4059906951d7 = L.marker(
+                [27.7217968, -82.43680286169365],
+                {}
+            ).addTo(map_019edba6cd5cefc2f85579274c36c041);
+        
+    
+        var popup_0e9fb14e1f57779a335d6a8376bcd178 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_94a4cc5fe4380527bafe104ac58f032c = $(`<div id="html_94a4cc5fe4380527bafe104ac58f032c" style="width: 100.0%; height: 100.0%;">201 4th Avenue NW Ruskin Florida 33570</div>`)[0];
+                popup_0e9fb14e1f57779a335d6a8376bcd178.setContent(html_94a4cc5fe4380527bafe104ac58f032c);
+            
+        
+
+        marker_f272d086518debd995ab4059906951d7.bindPopup(popup_0e9fb14e1f57779a335d6a8376bcd178)
+        ;
+
+        
+    
+    
+            marker_f272d086518debd995ab4059906951d7.bindTooltip(
+                `<div>
+                     201 4th Avenue NW Ruskin Florida 33570
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e7c1a761e8f744a7fae2e69baef7f71d = L.marker(
+                [29.19149597223885, -99.74943968931794],
+                {}
+            ).addTo(map_019edba6cd5cefc2f85579274c36c041);
+        
+    
+        var popup_ca5dfe03cc896ef57ccb109d8846d022 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c7c19980de073759a0230ffea90d79df = $(`<div id="html_c7c19980de073759a0230ffea90d79df" style="width: 100.0%; height: 100.0%;">250 Mills Lane Uvalde Texas 78801</div>`)[0];
+                popup_ca5dfe03cc896ef57ccb109d8846d022.setContent(html_c7c19980de073759a0230ffea90d79df);
+            
+        
+
+        marker_e7c1a761e8f744a7fae2e69baef7f71d.bindPopup(popup_ca5dfe03cc896ef57ccb109d8846d022)
+        ;
+
+        
+    
+    
+            marker_e7c1a761e8f744a7fae2e69baef7f71d.bindTooltip(
+                `<div>
+                     250 Mills Lane Uvalde Texas 78801
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_74195de1e25e15bb92f32b9134fc3448 = L.marker(
+                [36.0662078, -102.52002129460315],
+                {}
+            ).addTo(map_019edba6cd5cefc2f85579274c36c041);
+        
+    
+        var popup_cba9ca5c24749754d59de7fb2b03412a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a7caa888c6850b408f68653e456c510d = $(`<div id="html_a7caa888c6850b408f68653e456c510d" style="width: 100.0%; height: 100.0%;">301 Liberal Street Dalhart, Texas 79022</div>`)[0];
+                popup_cba9ca5c24749754d59de7fb2b03412a.setContent(html_a7caa888c6850b408f68653e456c510d);
+            
+        
+
+        marker_74195de1e25e15bb92f32b9134fc3448.bindPopup(popup_cba9ca5c24749754d59de7fb2b03412a)
+        ;
+
+        
+    
+    
+            marker_74195de1e25e15bb92f32b9134fc3448.bindTooltip(
+                `<div>
+                     301 Liberal Street Dalhart, Texas 79022
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5b551c2039ed2a0be5545114df775aff = L.marker(
+                [40.10105084049862, -102.2278285542446],
+                {}
+            ).addTo(map_019edba6cd5cefc2f85579274c36c041);
+        
+    
+        var popup_270f2db8a6b0b024f79212a04017828c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd6c1d2245888aba11218a89f1a7b2c5 = $(`<div id="html_bd6c1d2245888aba11218a89f1a7b2c5" style="width: 100.0%; height: 100.0%;">36635 A Street Wray, Colorado 80758</div>`)[0];
+                popup_270f2db8a6b0b024f79212a04017828c.setContent(html_bd6c1d2245888aba11218a89f1a7b2c5);
+            
+        
+
+        marker_5b551c2039ed2a0be5545114df775aff.bindPopup(popup_270f2db8a6b0b024f79212a04017828c)
+        ;
+
+        
+    
+    
+            marker_5b551c2039ed2a0be5545114df775aff.bindTooltip(
+                `<div>
+                     36635 A Street Wray, Colorado 80758
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f84fd71a6f348d91044422ce47508b4b = L.marker(
+                [32.1743839, -82.1124266],
+                {}
+            ).addTo(map_019edba6cd5cefc2f85579274c36c041);
+        
+    
+        var popup_c5b020c2cc128adb8ccaaa18ba651469 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_40cd657eb21df46f7d916dcc6efc5b68 = $(`<div id="html_40cd657eb21df46f7d916dcc6efc5b68" style="width: 100.0%; height: 100.0%;">709 S. Main St. Collins Georgia 30436</div>`)[0];
+                popup_c5b020c2cc128adb8ccaaa18ba651469.setContent(html_40cd657eb21df46f7d916dcc6efc5b68);
+            
+        
+
+        marker_f84fd71a6f348d91044422ce47508b4b.bindPopup(popup_c5b020c2cc128adb8ccaaa18ba651469)
+        ;
+
+        
+    
+    
+            marker_f84fd71a6f348d91044422ce47508b4b.bindTooltip(
+                `<div>
+                     709 S. Main St. Collins Georgia 30436
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bd9a6de005e6d937d7663199177a9a3d = L.marker(
+                [31.926086869239928, -81.89157677324175],
+                {}
+            ).addTo(map_019edba6cd5cefc2f85579274c36c041);
+        
+    
+        var popup_852e3aefc09fc947ae77da6a41495062 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bf6f867baf3f009033a71d597f72a426 = $(`<div id="html_bf6f867baf3f009033a71d597f72a426" style="width: 100.0%; height: 100.0%;">R Farms 102  Dasher Rd Glennville Georgia 30427</div>`)[0];
+                popup_852e3aefc09fc947ae77da6a41495062.setContent(html_bf6f867baf3f009033a71d597f72a426);
+            
+        
+
+        marker_bd9a6de005e6d937d7663199177a9a3d.bindPopup(popup_852e3aefc09fc947ae77da6a41495062)
+        ;
+
+        
+    
+    
+            marker_bd9a6de005e6d937d7663199177a9a3d.bindTooltip(
+                `<div>
+                     102  Dasher Rd Glennville Georgia 30427
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
