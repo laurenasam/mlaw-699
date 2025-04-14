@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_683b732ddcfaedddd792f023c53dbd18 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_683b732ddcfaedddd792f023c53dbd18" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_683b732ddcfaedddd792f023c53dbd18 = L.map(
+                "map_683b732ddcfaedddd792f023c53dbd18",
+                {
+                    center: [32.34608271176471, -84.8759554764706],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2286618bcca4f6153671c0901b34adff = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2286618bcca4f6153671c0901b34adff.addTo(map_683b732ddcfaedddd792f023c53dbd18);
+        
+    
+            var marker_cluster_347499e57d60c7bae8eaca103c0dd697 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_389be5b4cc7f3907f44ccc2777a6dc4a = L.marker(
+                [31.5174219, -82.63486019999999],
+                {
+}
+            ).addTo(marker_cluster_347499e57d60c7bae8eaca103c0dd697);
+        
+    
+            var icon_8a31f7fe09a7b26c9bd88d2bca375b76 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2e9863ad89485386637b4553cd7f95e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8bdcefdf2eabf3c2c628dcc7e1ff1da2 = $(`<div id="html_8bdcefdf2eabf3c2c628dcc7e1ff1da2" style="width: 100.0%; height: 100.0%;">         <b>Farm:</b> Down South Berries LLC<br>         <b>Case #:</b> H-300-20013-248635<br>         <b>Address:</b> 1104 Maynard Ave., Nicholls, GA 31554<br>         <b>Recruiter:</b> D Mendoza - 1<br>         <b>Year:</b> 2020<br>         <b>Hit:</b> Hit<br>         <b>Certainty:</b> 1.0<br>         <b>Facebook Mentioned?:</b> ❌<br>         <b># of Retailers:</b> 42     </div>`)[0];
+                popup_d2e9863ad89485386637b4553cd7f95e.setContent(html_8bdcefdf2eabf3c2c628dcc7e1ff1da2);
+            
+        
+
+        marker_389be5b4cc7f3907f44ccc2777a6dc4a.bindPopup(popup_d2e9863ad89485386637b4553cd7f95e)
+        ;
+
+        
+    
+    
+            marker_389be5b4cc7f3907f44ccc2777a6dc4a.bindTooltip(
+                `<div>
+                     Down South Berries LLC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_389be5b4cc7f3907f44ccc2777a6dc4a.setIcon(icon_8a31f7fe09a7b26c9bd88d2bca375b76);
+            
+    
+            var marker_03575869c0a2250d575eaf87adc9c1fa = L.marker(
+                [31.4990436, -82.50046909999999],
+                {
+}
+            ).addTo(marker_cluster_347499e57d60c7bae8eaca103c0dd697);
+        
+    
+            var icon_5f084f879aa70ff3e54986dedf8aceb9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_455a907d901f99ba3b5bf5adeb3cef30 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7bc20b315ec5b4c91873c2b2fa520d5d = $(`<div id="html_7bc20b315ec5b4c91873c2b2fa520d5d" style="width: 100.0%; height: 100.0%;">         <b>Farm:</b> L&S Farm<br>         <b>Case #:</b> H-300-20002-228933<br>         <b>Address:</b> 213 PINECONE ROAD, Alma, GA 31510<br>         <b>Recruiter:</b> D Mendoza - 1<br>         <b>Year:</b> 2020<br>         <b>Hit:</b> Hit<br>         <b>Certainty:</b> 1.0<br>         <b>Facebook Mentioned?:</b> ❌<br>         <b># of Retailers:</b> 4     </div>`)[0];
+                popup_455a907d901f99ba3b5bf5adeb3cef30.setContent(html_7bc20b315ec5b4c91873c2b2fa520d5d);
+            
+        
+
+        marker_03575869c0a2250d575eaf87adc9c1fa.bindPopup(popup_455a907d901f99ba3b5bf5adeb3cef30)
+        ;
+
+        
+    
+    
+            marker_03575869c0a2250d575eaf87adc9c1fa.bindTooltip(
+                `<div>
+                     L&S Farm
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_03575869c0a2250d575eaf87adc9c1fa.setIcon(icon_5f084f879aa70ff3e54986dedf8aceb9);
+            
+    
+            var marker_b0fe8a922f7398909af08d196c46c828 = L.marker(
+                [31.49078489999999, -82.6319343],
+                {
+}
+            ).addTo(marker_cluster_347499e57d60c7bae8eaca103c0dd697);
+        
+    
+            var icon_b6abf3f1a87ec6a1ee3909739e5286c9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c386bf93e92f9e2a2f6f3ffd3d2de12 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_17dc49a5a818b4cabe6f82995bbe4ede = $(`<div id="html_17dc49a5a818b4cabe6f82995bbe4ede" style="width: 100.0%; height: 100.0%;">         <b>Farm:</b> Burnham Berry Farms<br>         <b>Case #:</b> H-300-22014-831909<br>         <b>Address:</b> 211 Dorothy Burnham Road Nicholls, Georgia 31554<br>         <b>Recruiter:</b> JS Mendoza<br>         <b>Year:</b> 2022<br>         <b>Hit:</b> Hit<br>         <b>Certainty:</b> 3.0<br>         <b>Facebook Mentioned?:</b> ❌<br>         <b># of Retailers:</b> 9     </div>`)[0];
+                popup_1c386bf93e92f9e2a2f6f3ffd3d2de12.setContent(html_17dc49a5a818b4cabe6f82995bbe4ede);
+            
+        
+
+        marker_b0fe8a922f7398909af08d196c46c828.bindPopup(popup_1c386bf93e92f9e2a2f6f3ffd3d2de12)
+        ;
+
+        
+    
+    
+            marker_b0fe8a922f7398909af08d196c46c828.bindTooltip(
+                `<div>
+                     Burnham Berry Farms
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b0fe8a922f7398909af08d196c46c828.setIcon(icon_b6abf3f1a87ec6a1ee3909739e5286c9);
+            
+    
+            var marker_6aa7a69b038027425cf5921f062f9d73 = L.marker(
+                [32.135268, -82.313271],
+                {
+}
+            ).addTo(marker_cluster_347499e57d60c7bae8eaca103c0dd697);
+        
+    
+            var icon_74c619997d62e497f33fb40a03979410 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1eed2b801c555ad213edbcce1bb5639e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dd3dae50ad0fbe9a6a66d9ddef9fbab7 = $(`<div id="html_dd3dae50ad0fbe9a6a66d9ddef9fbab7" style="width: 100.0%; height: 100.0%;">         <b>Farm:</b> Smith Family Farms<br>         <b>Case #:</b> H-300-20357-975271<br>         <b>Address:</b> 931 SA HARDEN RD, Lyons, GA 30436<br>         <b>Recruiter:</b> JS Mendoza<br>         <b>Year:</b> 2021<br>         <b>Hit:</b> Hit<br>         <b>Certainty:</b> 2.0<br>         <b>Facebook Mentioned?:</b> ✅<br>         <b># of Retailers:</b> 1     </div>`)[0];
+                popup_1eed2b801c555ad213edbcce1bb5639e.setContent(html_dd3dae50ad0fbe9a6a66d9ddef9fbab7);
+            
+        
+
+        marker_6aa7a69b038027425cf5921f062f9d73.bindPopup(popup_1eed2b801c555ad213edbcce1bb5639e)
+        ;
+
+        
+    
+    
+            marker_6aa7a69b038027425cf5921f062f9d73.bindTooltip(
+                `<div>
+                     Smith Family Farms
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6aa7a69b038027425cf5921f062f9d73.setIcon(icon_74c619997d62e497f33fb40a03979410);
+            
+    
+            var marker_afed817cf9137c0697698fbe6e1269b1 = L.marker(
+                [31.4855312, -82.444244],
+                {
+}
+            ).addTo(marker_cluster_347499e57d60c7bae8eaca103c0dd697);
+        
+    
+            var icon_324dcb52f3415f779c9a2b662e36bf70 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_128ba994453f000a228629a425e4907a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_467052712ce5f54a361599dbec0da397 = $(`<div id="html_467052712ce5f54a361599dbec0da397" style="width: 100.0%; height: 100.0%;">         <b>Farm:</b> MP Aquino Harvesting, LLC<br>         <b>Case #:</b> H-300-21006-998351<br>         <b>Address:</b> 183 MARIGOLD LANE, Alma, GA 31510<br>         <b>Recruiter:</b> JS Mendoza<br>         <b>Year:</b> 2021<br>         <b>Hit:</b> Hit<br>         <b>Certainty:</b> 1.0<br>         <b>Facebook Mentioned?:</b> ❌<br>         <b># of Retailers:</b> 2     </div>`)[0];
+                popup_128ba994453f000a228629a425e4907a.setContent(html_467052712ce5f54a361599dbec0da397);
+            
+        
+
+        marker_afed817cf9137c0697698fbe6e1269b1.bindPopup(popup_128ba994453f000a228629a425e4907a)
+        ;
+
+        
+    
+    
+            marker_afed817cf9137c0697698fbe6e1269b1.bindTooltip(
+                `<div>
+                     MP Aquino Harvesting, LLC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_afed817cf9137c0697698fbe6e1269b1.setIcon(icon_324dcb52f3415f779c9a2b662e36bf70);
+            
+    
+            var marker_04ebd6aa6703697ebbbc7a6d790289e9 = L.marker(
+                [31.5174219, -82.63486019999999],
+                {
+}
+            ).addTo(marker_cluster_347499e57d60c7bae8eaca103c0dd697);
+        
+    
+            var icon_6fcaa37a4ab056410b3929c6bf140c38 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e2c925828a0e2931c32d5d09382a950d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_02bb97875354472238a78a13407a2987 = $(`<div id="html_02bb97875354472238a78a13407a2987" style="width: 100.0%; height: 100.0%;">         <b>Farm:</b> (None found)<br>         <b>Case #:</b> H-300-20009-241352<br>         <b>Address:</b> 1104 Maynard Ave., Nicholls, GA 31554<br>         <b>Recruiter:</b> JS Mendoza<br>         <b>Year:</b> 2020<br>         <b>Hit:</b> Hit<br>         <b>Certainty:</b> 1.0<br>         <b>Facebook Mentioned?:</b> ❌<br>         <b># of Retailers:</b> 2     </div>`)[0];
+                popup_e2c925828a0e2931c32d5d09382a950d.setContent(html_02bb97875354472238a78a13407a2987);
+            
+        
+
+        marker_04ebd6aa6703697ebbbc7a6d790289e9.bindPopup(popup_e2c925828a0e2931c32d5d09382a950d)
+        ;
+
+        
+    
+    
+            marker_04ebd6aa6703697ebbbc7a6d790289e9.bindTooltip(
+                `<div>
+                     (None found)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_04ebd6aa6703697ebbbc7a6d790289e9.setIcon(icon_6fcaa37a4ab056410b3929c6bf140c38);
+            
+    
+            var marker_964ee8c642f5dee998787ebb0fef43a9 = L.marker(
+                [31.9296525, -81.9041501],
+                {
+}
+            ).addTo(marker_cluster_347499e57d60c7bae8eaca103c0dd697);
+        
+    
+            var icon_6cd2e3c5d1e9df62db913ef92172d0e4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c0b1b7ac7d4b365e9775bc6c6bd300b9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c46d4084af31975d0e7166800e8defe1 = $(`<div id="html_c46d4084af31975d0e7166800e8defe1" style="width: 100.0%; height: 100.0%;">         <b>Farm:</b> G&R Farms<br>         <b>Case #:</b> H-300-23086-881434<br>         <b>Address:</b> 102 Joe Dasher Rd Glennville, Georgia 30427<br>         <b>Recruiter:</b> M Saavedra - 3<br>         <b>Year:</b> 2023<br>         <b>Hit:</b> Hit<br>         <b>Certainty:</b> 2.0<br>         <b>Facebook Mentioned?:</b> ❌<br>         <b># of Retailers:</b> 4     </div>`)[0];
+                popup_c0b1b7ac7d4b365e9775bc6c6bd300b9.setContent(html_c46d4084af31975d0e7166800e8defe1);
+            
+        
+
+        marker_964ee8c642f5dee998787ebb0fef43a9.bindPopup(popup_c0b1b7ac7d4b365e9775bc6c6bd300b9)
+        ;
+
+        
+    
+    
+            marker_964ee8c642f5dee998787ebb0fef43a9.bindTooltip(
+                `<div>
+                     G&R Farms
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_964ee8c642f5dee998787ebb0fef43a9.setIcon(icon_6cd2e3c5d1e9df62db913ef92172d0e4);
+            
+    
+            var marker_15953d2eaa59536bede5a26cb09e0870 = L.marker(
+                [40.1026297, -102.228759],
+                {
+}
+            ).addTo(marker_cluster_347499e57d60c7bae8eaca103c0dd697);
+        
+    
+            var icon_f65a30d50a1b0015c280d98dd22b5d3a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_24df37ca27bb5653df2ecde7e14217d0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_29d8c4b45bdec79564c55f49d08e86e0 = $(`<div id="html_29d8c4b45bdec79564c55f49d08e86e0" style="width: 100.0%; height: 100.0%;">         <b>Farm:</b> Pro-Health, LLC<br>         <b>Case #:</b> H-300-21253-577257<br>         <b>Address:</b> 36635 A Street, Wray, CO 80758<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Year:</b> 2022<br>         <b>Hit:</b> Hit<br>         <b>Certainty:</b> 0.0<br>         <b>Facebook Mentioned?:</b> ❌<br>         <b># of Retailers:</b> 3     </div>`)[0];
+                popup_24df37ca27bb5653df2ecde7e14217d0.setContent(html_29d8c4b45bdec79564c55f49d08e86e0);
+            
+        
+
+        marker_15953d2eaa59536bede5a26cb09e0870.bindPopup(popup_24df37ca27bb5653df2ecde7e14217d0)
+        ;
+
+        
+    
+    
+            marker_15953d2eaa59536bede5a26cb09e0870.bindTooltip(
+                `<div>
+                     Pro-Health, LLC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_15953d2eaa59536bede5a26cb09e0870.setIcon(icon_f65a30d50a1b0015c280d98dd22b5d3a);
+            
+    
+            var marker_01e4483c500325022953fc9f52cceeee = L.marker(
+                [31.5174219, -82.63486019999999],
+                {
+}
+            ).addTo(marker_cluster_347499e57d60c7bae8eaca103c0dd697);
+        
+    
+            var icon_f436d92926359c23a1a840a9064ec825 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b4487fba6f0d3e789e7ba730600db68d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_470cbb236595c7ab9035feee2713eae8 = $(`<div id="html_470cbb236595c7ab9035feee2713eae8" style="width: 100.0%; height: 100.0%;">         <b>Farm:</b> Red Sky Ag, LLC<br>         <b>Case #:</b> H-300-20260-827359<br>         <b>Address:</b> 1104 Maynard Ave., Nicholls, GA 31554<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Year:</b> 2021<br>         <b>Hit:</b> Hit<br>         <b>Certainty:</b> 0.0<br>         <b>Facebook Mentioned?:</b> ✅<br>         <b># of Retailers:</b> 2     </div>`)[0];
+                popup_b4487fba6f0d3e789e7ba730600db68d.setContent(html_470cbb236595c7ab9035feee2713eae8);
+            
+        
+
+        marker_01e4483c500325022953fc9f52cceeee.bindPopup(popup_b4487fba6f0d3e789e7ba730600db68d)
+        ;
+
+        
+    
+    
+            marker_01e4483c500325022953fc9f52cceeee.bindTooltip(
+                `<div>
+                     Red Sky Ag, LLC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_01e4483c500325022953fc9f52cceeee.setIcon(icon_f436d92926359c23a1a840a9064ec825);
+            
+    
+            var marker_b0b2a00564a8a8059ddee9c16ed2d185 = L.marker(
+                [31.5174219, -82.63486019999999],
+                {
+}
+            ).addTo(marker_cluster_347499e57d60c7bae8eaca103c0dd697);
+        
+    
+            var icon_3e2efffae5faacf98b645bd69059479b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_22a0dff6e621f3d0274c0c098d9464c5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9df0515eb7ba0ff14be432b7ccd7d94c = $(`<div id="html_9df0515eb7ba0ff14be432b7ccd7d94c" style="width: 100.0%; height: 100.0%;">         <b>Farm:</b> Farmers John Berries<br>         <b>Case #:</b> H-300-20363-980683<br>         <b>Address:</b> 1104 Maynard Ave., Nicholls, GA 31554<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Year:</b> 2021<br>         <b>Hit:</b> Hit<br>         <b>Certainty:</b> 0.0<br>         <b>Facebook Mentioned?:</b> ❌<br>         <b># of Retailers:</b> 1     </div>`)[0];
+                popup_22a0dff6e621f3d0274c0c098d9464c5.setContent(html_9df0515eb7ba0ff14be432b7ccd7d94c);
+            
+        
+
+        marker_b0b2a00564a8a8059ddee9c16ed2d185.bindPopup(popup_22a0dff6e621f3d0274c0c098d9464c5)
+        ;
+
+        
+    
+    
+            marker_b0b2a00564a8a8059ddee9c16ed2d185.bindTooltip(
+                `<div>
+                     Farmers John Berries
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b0b2a00564a8a8059ddee9c16ed2d185.setIcon(icon_3e2efffae5faacf98b645bd69059479b);
+            
+    
+            var marker_1684d39e8c8a0c7671012bfa466d9391 = L.marker(
+                [31.5174219, -82.63486019999999],
+                {
+}
+            ).addTo(marker_cluster_347499e57d60c7bae8eaca103c0dd697);
+        
+    
+            var icon_3c3390633920f9a97324ea47cdab745a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_42b628750a3ae4e369553c5619479f36 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_aca126d3e3ce6053143b5cfe77637be4 = $(`<div id="html_aca126d3e3ce6053143b5cfe77637be4" style="width: 100.0%; height: 100.0%;">         <b>Farm:</b> Berry Brothers<br>         <b>Case #:</b> H-300-21007-999949<br>         <b>Address:</b> 1104 Maynard Ave., Nicholls, GA 31554<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Year:</b> 2021<br>         <b>Hit:</b> Hit<br>         <b>Certainty:</b> 0.0<br>         <b>Facebook Mentioned?:</b> ✅<br>         <b># of Retailers:</b> 1     </div>`)[0];
+                popup_42b628750a3ae4e369553c5619479f36.setContent(html_aca126d3e3ce6053143b5cfe77637be4);
+            
+        
+
+        marker_1684d39e8c8a0c7671012bfa466d9391.bindPopup(popup_42b628750a3ae4e369553c5619479f36)
+        ;
+
+        
+    
+    
+            marker_1684d39e8c8a0c7671012bfa466d9391.bindTooltip(
+                `<div>
+                     Berry Brothers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1684d39e8c8a0c7671012bfa466d9391.setIcon(icon_3c3390633920f9a97324ea47cdab745a);
+            
+    
+            var marker_f3d3d99f75b5f15d013f112d1427752f = L.marker(
+                [31.5174219, -82.63486019999999],
+                {
+}
+            ).addTo(marker_cluster_347499e57d60c7bae8eaca103c0dd697);
+        
+    
+            var icon_5524a0cd032f2fcc82ff89d7cb7c96fc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c54493bf9842af11a1e605a7ed29a71b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_15230d767373e6199bd9cde1877708f0 = $(`<div id="html_15230d767373e6199bd9cde1877708f0" style="width: 100.0%; height: 100.0%;">         <b>Farm:</b> CT Strickland Farms<br>         <b>Case #:</b> H-300-21026-033893<br>         <b>Address:</b> 1104 Maynard Ave., Nicholls, GA 31554<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Year:</b> 2021<br>         <b>Hit:</b> Hit<br>         <b>Certainty:</b> 0.0<br>         <b>Facebook Mentioned?:</b> ✅<br>         <b># of Retailers:</b> 2     </div>`)[0];
+                popup_c54493bf9842af11a1e605a7ed29a71b.setContent(html_15230d767373e6199bd9cde1877708f0);
+            
+        
+
+        marker_f3d3d99f75b5f15d013f112d1427752f.bindPopup(popup_c54493bf9842af11a1e605a7ed29a71b)
+        ;
+
+        
+    
+    
+            marker_f3d3d99f75b5f15d013f112d1427752f.bindTooltip(
+                `<div>
+                     CT Strickland Farms
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f3d3d99f75b5f15d013f112d1427752f.setIcon(icon_5524a0cd032f2fcc82ff89d7cb7c96fc);
+            
+    
+            var marker_41574b641930f6b7b4db5f899e11909d = L.marker(
+                [31.5174219, -82.63486019999999],
+                {
+}
+            ).addTo(marker_cluster_347499e57d60c7bae8eaca103c0dd697);
+        
+    
+            var icon_83fc53026249d723ad753e01a78632c4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_573777715a3d9dadc690cc378f9f7c30 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_729d3066d399b78a01619002e0d8109d = $(`<div id="html_729d3066d399b78a01619002e0d8109d" style="width: 100.0%; height: 100.0%;">         <b>Farm:</b> T&M Farms & Sons<br>         <b>Case #:</b> H-300-21124-285763<br>         <b>Address:</b> 1104 Maynard Ave., Nicholls, GA 31554<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Year:</b> 2021<br>         <b>Hit:</b> Hit<br>         <b>Certainty:</b> 0.0<br>         <b>Facebook Mentioned?:</b> ❌<br>         <b># of Retailers:</b> 1     </div>`)[0];
+                popup_573777715a3d9dadc690cc378f9f7c30.setContent(html_729d3066d399b78a01619002e0d8109d);
+            
+        
+
+        marker_41574b641930f6b7b4db5f899e11909d.bindPopup(popup_573777715a3d9dadc690cc378f9f7c30)
+        ;
+
+        
+    
+    
+            marker_41574b641930f6b7b4db5f899e11909d.bindTooltip(
+                `<div>
+                     T&M Farms & Sons
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_41574b641930f6b7b4db5f899e11909d.setIcon(icon_83fc53026249d723ad753e01a78632c4);
+            
+    
+            var marker_e3a303072df7f11bf2ad0ea6ef46b487 = L.marker(
+                [36.0662772, -102.5198136],
+                {
+}
+            ).addTo(marker_cluster_347499e57d60c7bae8eaca103c0dd697);
+        
+    
+            var icon_79b1617b9fba9804535c5da2ec86d72c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_13cb58afc8bea8383e1b1e313a057566 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6161e6842a681a10113d2b47fc499168 = $(`<div id="html_6161e6842a681a10113d2b47fc499168" style="width: 100.0%; height: 100.0%;">         <b>Farm:</b> Lusk Onion<br>         <b>Case #:</b> H-300-21166-398136<br>         <b>Address:</b> 301 Liberal Street Dalhart, Texas 79022<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Year:</b> 2021<br>         <b>Hit:</b> Hit<br>         <b>Certainty:</b> 0.0<br>         <b>Facebook Mentioned?:</b> ✅<br>         <b># of Retailers:</b> 1     </div>`)[0];
+                popup_13cb58afc8bea8383e1b1e313a057566.setContent(html_6161e6842a681a10113d2b47fc499168);
+            
+        
+
+        marker_e3a303072df7f11bf2ad0ea6ef46b487.bindPopup(popup_13cb58afc8bea8383e1b1e313a057566)
+        ;
+
+        
+    
+    
+            marker_e3a303072df7f11bf2ad0ea6ef46b487.bindTooltip(
+                `<div>
+                     Lusk Onion
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e3a303072df7f11bf2ad0ea6ef46b487.setIcon(icon_79b1617b9fba9804535c5da2ec86d72c);
+            
+    
+            var marker_d24914eb0f901469cd7d82799712347b = L.marker(
+                [31.5174219, -82.63486019999999],
+                {
+}
+            ).addTo(marker_cluster_347499e57d60c7bae8eaca103c0dd697);
+        
+    
+            var icon_0af8c4c94f2992c187498a87e7d6b259 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0383796ffd2af1bcc96ece7f92bdbd55 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d05e995381d8173ac72f82164add97d8 = $(`<div id="html_d05e995381d8173ac72f82164add97d8" style="width: 100.0%; height: 100.0%;">         <b>Farm:</b> J&T Harvesting, LLC<br>         <b>Case #:</b> H-300-20208-735658<br>         <b>Address:</b> 1104 Maynard Ave., Nicholls, GA 31554<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Year:</b> 2020<br>         <b>Hit:</b> Hit<br>         <b>Certainty:</b> 0.0<br>         <b>Facebook Mentioned?:</b> ❌<br>         <b># of Retailers:</b> 5     </div>`)[0];
+                popup_0383796ffd2af1bcc96ece7f92bdbd55.setContent(html_d05e995381d8173ac72f82164add97d8);
+            
+        
+
+        marker_d24914eb0f901469cd7d82799712347b.bindPopup(popup_0383796ffd2af1bcc96ece7f92bdbd55)
+        ;
+
+        
+    
+    
+            marker_d24914eb0f901469cd7d82799712347b.bindTooltip(
+                `<div>
+                     J&T Harvesting, LLC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d24914eb0f901469cd7d82799712347b.setIcon(icon_0af8c4c94f2992c187498a87e7d6b259);
+            
+    
+            var marker_e6ef0ed14eac833eab4b530475407c26 = L.marker(
+                [31.5174219, -82.63486019999999],
+                {
+}
+            ).addTo(marker_cluster_347499e57d60c7bae8eaca103c0dd697);
+        
+    
+            var icon_72a517f53c2da3a7697f393e78612dfd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5ae8fa3220ab0a1d7137c0e8523ad475 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f074127b06b30cadb3c682f7b61eaf38 = $(`<div id="html_f074127b06b30cadb3c682f7b61eaf38" style="width: 100.0%; height: 100.0%;">         <b>Farm:</b> Alex Olivares Harvesting, LLC<br>         <b>Case #:</b> H-300-20150-611826<br>         <b>Address:</b> 1104 Maynard Ave., Nicholls, GA 31554<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Year:</b> 2020<br>         <b>Hit:</b> Hit<br>         <b>Certainty:</b> 0.0<br>         <b>Facebook Mentioned?:</b> ✅<br>         <b># of Retailers:</b> 4     </div>`)[0];
+                popup_5ae8fa3220ab0a1d7137c0e8523ad475.setContent(html_f074127b06b30cadb3c682f7b61eaf38);
+            
+        
+
+        marker_e6ef0ed14eac833eab4b530475407c26.bindPopup(popup_5ae8fa3220ab0a1d7137c0e8523ad475)
+        ;
+
+        
+    
+    
+            marker_e6ef0ed14eac833eab4b530475407c26.bindTooltip(
+                `<div>
+                     Alex Olivares Harvesting, LLC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e6ef0ed14eac833eab4b530475407c26.setIcon(icon_72a517f53c2da3a7697f393e78612dfd);
+            
+    
+            var marker_570bd2f41bc589a723aadee79a11ee60 = L.marker(
+                [31.5174219, -82.63486019999999],
+                {
+}
+            ).addTo(marker_cluster_347499e57d60c7bae8eaca103c0dd697);
+        
+    
+            var icon_2796bd14e487740303ea2c45badcd68c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_caaeed06fe7148cff05b10c38ac699c3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0c0e8a0ea4df9fb3b030ae68e1464374 = $(`<div id="html_0c0e8a0ea4df9fb3b030ae68e1464374" style="width: 100.0%; height: 100.0%;">         <b>Farm:</b> J&T Harvesting, LLC<br>         <b>Case #:</b> H-300-20051-337029<br>         <b>Address:</b> 1104 Maynard Ave., Nicholls, GA 31554<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Year:</b> 2020<br>         <b>Hit:</b> Hit<br>         <b>Certainty:</b> 0.0<br>         <b>Facebook Mentioned?:</b> ❌<br>         <b># of Retailers:</b> 1     </div>`)[0];
+                popup_caaeed06fe7148cff05b10c38ac699c3.setContent(html_0c0e8a0ea4df9fb3b030ae68e1464374);
+            
+        
+
+        marker_570bd2f41bc589a723aadee79a11ee60.bindPopup(popup_caaeed06fe7148cff05b10c38ac699c3)
+        ;
+
+        
+    
+    
+            marker_570bd2f41bc589a723aadee79a11ee60.bindTooltip(
+                `<div>
+                     J&T Harvesting, LLC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_570bd2f41bc589a723aadee79a11ee60.setIcon(icon_2796bd14e487740303ea2c45badcd68c);
+            
+    
+            marker_cluster_347499e57d60c7bae8eaca103c0dd697.addTo(map_683b732ddcfaedddd792f023c53dbd18);
+        
+</script>
+</html>

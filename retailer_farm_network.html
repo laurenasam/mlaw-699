@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "lightgreen", "font": {"color": "black"}, "id": "Down South Berries LLC", "label": "Down South Berries LLC", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Naturipe Farms", "label": "Naturipe Farms", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "99 Cents Only Stores", "label": "99 Cents Only Stores", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Ahold", "label": "Ahold", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Aldi", "label": "Aldi", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "AWG", "label": "AWG", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Bashas", "label": "Bashas", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Big Y", "label": "Big Y", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Charlie\u0027s Produce", "label": "Charlie\u0027s Produce", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Costco", "label": "Costco", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Delhaize", "label": "Delhaize", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Dollar General", "label": "Dollar General", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Food Lion", "label": "Food Lion", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Giant Eagle", "label": "Giant Eagle", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Harris Teeter", "label": "Harris Teeter", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "H.E.B.", "label": "H.E.B.", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "H-Mart", "label": "H-Mart", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Jewel", "label": "Jewel", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "K-VA-T Food Stores", "label": "K-VA-T Food Stores", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "King Soopers", "label": "King Soopers", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Kroger", "label": "Kroger", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Loblaw", "label": "Loblaw", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Market Basket", "label": "Market Basket", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Meijer", "label": "Meijer", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Publix", "label": "Publix", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Raley\u0027s", "label": "Raley\u0027s", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Roundy\u0027s", "label": "Roundy\u0027s", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Safeway", "label": "Safeway", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Sam\u0027s Club", "label": "Sam\u0027s Club", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Save Mart", "label": "Save Mart", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Sendik\u0027s Food Markets", "label": "Sendik\u0027s Food Markets", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Shaw\u0027s", "label": "Shaw\u0027s", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Sobeys", "label": "Sobeys", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "SpartanNash", "label": "SpartanNash", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Sprouts Farmers Market", "label": "Sprouts Farmers Market", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Super", "label": "Super", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Target", "label": "Target", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Supervalu", "label": "Supervalu", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Trader Joe\u0027s", "label": "Trader Joe\u0027s", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Walmart", "label": "Walmart", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Wegmans", "label": "Wegmans", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Whole Foods", "label": "Whole Foods", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "and WinCo", "label": "and WinCo", "shape": "dot"}, {"color": "lightgreen", "font": {"color": "black"}, "id": "L\u0026S Farm", "label": "L\u0026S Farm", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Store Locator \u2013 sealtheseasons", "label": "Store Locator \u2013 sealtheseasons", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Peoples-Food Ann Arbor", "label": "Peoples-Food Ann Arbor", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Plum Market", "label": "Plum Market", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Zerbo\u0027s.", "label": "Zerbo\u0027s.", "shape": "dot"}, {"color": "lightgreen", "font": {"color": "black"}, "id": "Burnham Berry Farms", "label": "Burnham Berry Farms", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "99 cents", "label": "99 cents", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "kroger", "label": "kroger", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "costco", "label": "costco", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "whole foods", "label": "whole foods", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "trader joe\u0027s", "label": "trader joe\u0027s", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "walmart", "label": "walmart", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "publix", "label": "publix", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "meijer", "label": "meijer", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "etc.", "label": "etc.", "shape": "dot"}, {"color": "lightgreen", "font": {"color": "black"}, "id": "Smith Family Farms", "label": "Smith Family Farms", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Dillons", "label": "Dillons", "shape": "dot"}, {"color": "lightgreen", "font": {"color": "black"}, "id": "MP Aquino Harvesting, LLC", "label": "MP Aquino Harvesting, LLC", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Naturipe", "label": "Naturipe", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Alpine Fresh", "label": "Alpine Fresh", "shape": "dot"}, {"color": "lightgreen", "font": {"color": "black"}, "id": "(None found)", "label": "(None found)", "shape": "dot"}, {"color": "lightgreen", "font": {"color": "black"}, "id": "G\u0026R Farms", "label": "G\u0026R Farms", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "King Soopers (from website pictures); G\u0026R Farms is a direct to consumer retailer - customer reviews on google; Potential (from facebook followers): Schnucks; Growing retailers (participating retailers: Wegmens", "label": "King Soopers (from website pictures); G\u0026R Farms is a direct to consumer retailer - customer reviews on google; Potential (from facebook followers): Schnucks; Growing retailers (participating retailers: Wegmens", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "etc)", "label": "etc)", "shape": "dot"}, {"color": "lightgreen", "font": {"color": "black"}, "id": "Pro-Health, LLC", "label": "Pro-Health, LLC", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "HEB", "label": "HEB", "shape": "dot"}, {"color": "lightgreen", "font": {"color": "black"}, "id": "Red Sky Ag, LLC", "label": "Red Sky Ag, LLC", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Weis Markets", "label": "Weis Markets", "shape": "dot"}, {"color": "lightgreen", "font": {"color": "black"}, "id": "Farmers John Berries", "label": "Farmers John Berries", "shape": "dot"}, {"color": "lightgreen", "font": {"color": "black"}, "id": "Berry Brothers", "label": "Berry Brothers", "shape": "dot"}, {"color": "lightgreen", "font": {"color": "black"}, "id": "CT Strickland Farms", "label": "CT Strickland Farms", "shape": "dot"}, {"color": "lightgreen", "font": {"color": "black"}, "id": "T\u0026M Farms \u0026 Sons", "label": "T\u0026M Farms \u0026 Sons", "shape": "dot"}, {"color": "lightgreen", "font": {"color": "black"}, "id": "Lusk Onion", "label": "Lusk Onion", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "HEB Walmart", "label": "HEB Walmart", "shape": "dot"}, {"color": "lightgreen", "font": {"color": "black"}, "id": "J\u0026T Harvesting, LLC", "label": "J\u0026T Harvesting, LLC", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Mountain King: Aldi\u0027s (Florida)", "label": "Mountain King: Aldi\u0027s (Florida)", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Sam\u0027s Club; Alpine Potato", "label": "Sam\u0027s Club; Alpine Potato", "shape": "dot"}, {"color": "lightgreen", "font": {"color": "black"}, "id": "Alex Olivares Harvesting, LLC", "label": "Alex Olivares Harvesting, LLC", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Lusk Onion Co.", "label": "Lusk Onion Co.", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "Lusk Onions sells pumpkins to Brookshire\u0027s Food \u0026 Pharmacy", "label": "Lusk Onions sells pumpkins to Brookshire\u0027s Food \u0026 Pharmacy", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "H-E-B", "label": "H-E-B", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "and Trader Joe\u0027s in the Texas area.", "label": "and Trader Joe\u0027s in the Texas area.", "shape": "dot"}, {"color": "skyblue", "font": {"color": "black"}, "id": "BJ\u0027s and Kroger", "label": "BJ\u0027s and Kroger", "shape": "dot"}]);
+                  edges = new vis.DataSet([{"from": "Down South Berries LLC", "to": "Naturipe Farms"}, {"from": "Down South Berries LLC", "to": "99 Cents Only Stores"}, {"from": "Down South Berries LLC", "to": "Ahold"}, {"from": "Down South Berries LLC", "to": "Aldi"}, {"from": "Down South Berries LLC", "to": "AWG"}, {"from": "Down South Berries LLC", "to": "Bashas"}, {"from": "Down South Berries LLC", "to": "Big Y"}, {"from": "Down South Berries LLC", "to": "Charlie\u0027s Produce"}, {"from": "Down South Berries LLC", "to": "Costco"}, {"from": "Down South Berries LLC", "to": "Delhaize"}, {"from": "Down South Berries LLC", "to": "Dollar General"}, {"from": "Down South Berries LLC", "to": "Food Lion"}, {"from": "Down South Berries LLC", "to": "Giant Eagle"}, {"from": "Down South Berries LLC", "to": "Harris Teeter"}, {"from": "Down South Berries LLC", "to": "H.E.B."}, {"from": "Down South Berries LLC", "to": "H-Mart"}, {"from": "Down South Berries LLC", "to": "Jewel"}, {"from": "Down South Berries LLC", "to": "K-VA-T Food Stores"}, {"from": "Down South Berries LLC", "to": "King Soopers"}, {"from": "Down South Berries LLC", "to": "Kroger"}, {"from": "Down South Berries LLC", "to": "Loblaw"}, {"from": "Down South Berries LLC", "to": "Market Basket"}, {"from": "Down South Berries LLC", "to": "Meijer"}, {"from": "Down South Berries LLC", "to": "Publix"}, {"from": "Down South Berries LLC", "to": "Raley\u0027s"}, {"from": "Down South Berries LLC", "to": "Roundy\u0027s"}, {"from": "Down South Berries LLC", "to": "Safeway"}, {"from": "Down South Berries LLC", "to": "Sam\u0027s Club"}, {"from": "Down South Berries LLC", "to": "Save Mart"}, {"from": "Down South Berries LLC", "to": "Sendik\u0027s Food Markets"}, {"from": "Down South Berries LLC", "to": "Shaw\u0027s"}, {"from": "Down South Berries LLC", "to": "Sobeys"}, {"from": "Down South Berries LLC", "to": "SpartanNash"}, {"from": "Down South Berries LLC", "to": "Sprouts Farmers Market"}, {"from": "Down South Berries LLC", "to": "Super"}, {"from": "Down South Berries LLC", "to": "Target"}, {"from": "Down South Berries LLC", "to": "Supervalu"}, {"from": "Down South Berries LLC", "to": "Trader Joe\u0027s"}, {"from": "Down South Berries LLC", "to": "Walmart"}, {"from": "Down South Berries LLC", "to": "Wegmans"}, {"from": "Down South Berries LLC", "to": "Whole Foods"}, {"from": "Down South Berries LLC", "to": "and WinCo"}, {"from": "Costco", "to": "G\u0026R Farms"}, {"from": "Costco", "to": "Red Sky Ag, LLC"}, {"from": "Costco", "to": "J\u0026T Harvesting, LLC"}, {"from": "Kroger", "to": "T\u0026M Farms \u0026 Sons"}, {"from": "Meijer", "to": "Pro-Health, LLC"}, {"from": "Publix", "to": "Farmers John Berries"}, {"from": "Safeway", "to": "J\u0026T Harvesting, LLC"}, {"from": "Target", "to": "G\u0026R Farms"}, {"from": "Walmart", "to": "Pro-Health, LLC"}, {"from": "Walmart", "to": "CT Strickland Farms"}, {"from": "Walmart", "to": "J\u0026T Harvesting, LLC"}, {"from": "Whole Foods", "to": "Berry Brothers"}, {"from": "Whole Foods", "to": "CT Strickland Farms"}, {"from": "L\u0026S Farm", "to": "Store Locator \u2013 sealtheseasons"}, {"from": "L\u0026S Farm", "to": "Peoples-Food Ann Arbor"}, {"from": "L\u0026S Farm", "to": "Plum Market"}, {"from": "L\u0026S Farm", "to": "Zerbo\u0027s."}, {"from": "Burnham Berry Farms", "to": "99 cents"}, {"from": "Burnham Berry Farms", "to": "kroger"}, {"from": "Burnham Berry Farms", "to": "costco"}, {"from": "Burnham Berry Farms", "to": "whole foods"}, {"from": "Burnham Berry Farms", "to": "trader joe\u0027s"}, {"from": "Burnham Berry Farms", "to": "walmart"}, {"from": "Burnham Berry Farms", "to": "publix"}, {"from": "Burnham Berry Farms", "to": "meijer"}, {"from": "Burnham Berry Farms", "to": "etc."}, {"from": "Smith Family Farms", "to": "Dillons"}, {"from": "MP Aquino Harvesting, LLC", "to": "Naturipe"}, {"from": "MP Aquino Harvesting, LLC", "to": "Alpine Fresh"}, {"from": "Naturipe", "to": "(None found)"}, {"from": "Alpine Fresh", "to": "(None found)"}, {"from": "G\u0026R Farms", "to": "King Soopers (from website pictures); G\u0026R Farms is a direct to consumer retailer - customer reviews on google; Potential (from facebook followers): Schnucks; Growing retailers (participating retailers: Wegmens"}, {"from": "G\u0026R Farms", "to": "etc)"}, {"from": "Pro-Health, LLC", "to": "HEB"}, {"from": "Red Sky Ag, LLC", "to": "Weis Markets"}, {"from": "Lusk Onion", "to": "HEB Walmart"}, {"from": "J\u0026T Harvesting, LLC", "to": "Mountain King: Aldi\u0027s (Florida)"}, {"from": "J\u0026T Harvesting, LLC", "to": "Sam\u0027s Club; Alpine Potato"}, {"from": "J\u0026T Harvesting, LLC", "to": "BJ\u0027s and Kroger"}, {"from": "Alex Olivares Harvesting, LLC", "to": "Lusk Onion Co."}, {"from": "Alex Olivares Harvesting, LLC", "to": "Lusk Onions sells pumpkins to Brookshire\u0027s Food \u0026 Pharmacy"}, {"from": "Alex Olivares Harvesting, LLC", "to": "H-E-B"}, {"from": "Alex Olivares Harvesting, LLC", "to": "and Trader Joe\u0027s in the Texas area."}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "forceAtlas2Based": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.01,
+            "damping": 0.4,
+            "gravitationalConstant": -50,
+            "springConstant": 0.08,
+            "springLength": 100
+        },
+        "solver": "forceAtlas2Based",
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

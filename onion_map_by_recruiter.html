@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_03149e968a2aaf281c2e47fc95a472a7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_03149e968a2aaf281c2e47fc95a472a7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_03149e968a2aaf281c2e47fc95a472a7 = L.map(
+                "map_03149e968a2aaf281c2e47fc95a472a7",
+                {
+                    center: [37.8, -96.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6d0ac1857b1b4a08c3982116c23e7d14 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6d0ac1857b1b4a08c3982116c23e7d14.addTo(map_03149e968a2aaf281c2e47fc95a472a7);
+        
+    
+            var marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_f26762bb32cb8ad86e6193c0312f5703 = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f);
+        
+    
+        var popup_9d0f62e98f52cfeff889505c0417bdd4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9a67a39f6b8f9f463587e252e8137a64 = $(`<div id="html_9a67a39f6b8f9f463587e252e8137a64" style="width: 100.0%; height: 100.0%;">         <b>Case Number:</b> H-300-20013-248635<br>         <b>Farm:</b> Down South Berries LLC<br>         <b>Recruiter:</b> D Mendoza - 1<br>         <b>Retailers:</b> Naturipe Farms, 99 Cents Only Stores, Ahold, Aldi, AWG, Bashas, Big Y, Charlie's Produce, Costco, Delhaize, Dollar General, Food Lion, Giant Eagle, Harris Teeter, H.E.B., H-Mart, Jewel, K-VA-T Food Stores, King Soopers, Kroger, Loblaw, Market Basket, Meijer, Publix, Raley's, Roundy's, Safeway, Sam's Club, Save Mart, Sendik's Food Markets, Shaw's, Sobeys, SpartanNash, Sprouts Farmers Market, Super, Target, Supervalu, Trader Joe's, Walmart, Wegmans, Whole Foods, and WinCo<br>         <b>Year:</b> 2020.0<br>         <b>Hit Status:</b> Hit<br>         <b>Certainty:</b> 1.0     </div>`)[0];
+                popup_9d0f62e98f52cfeff889505c0417bdd4.setContent(html_9a67a39f6b8f9f463587e252e8137a64);
+            
+        
+
+        circle_marker_f26762bb32cb8ad86e6193c0312f5703.bindPopup(popup_9d0f62e98f52cfeff889505c0417bdd4)
+        ;
+
+        
+    
+    
+            var circle_marker_629ca2767e72b5616062019f9411483a = L.circleMarker(
+                [31.4990436, -82.50046909999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f);
+        
+    
+        var popup_eb9373b243bab204d74796dab36b80b9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b0ce828a9ee03019325ea18db156ea1c = $(`<div id="html_b0ce828a9ee03019325ea18db156ea1c" style="width: 100.0%; height: 100.0%;">         <b>Case Number:</b> H-300-20002-228933<br>         <b>Farm:</b> L&S Farm<br>         <b>Recruiter:</b> D Mendoza - 1<br>         <b>Retailers:</b> Store Locator – sealtheseasons, Peoples-Food Ann Arbor, Plum Market, Zerbo's.<br>         <b>Year:</b> 2020.0<br>         <b>Hit Status:</b> Hit<br>         <b>Certainty:</b> 1.0     </div>`)[0];
+                popup_eb9373b243bab204d74796dab36b80b9.setContent(html_b0ce828a9ee03019325ea18db156ea1c);
+            
+        
+
+        circle_marker_629ca2767e72b5616062019f9411483a.bindPopup(popup_eb9373b243bab204d74796dab36b80b9)
+        ;
+
+        
+    
+    
+            var circle_marker_837d0957816203f1569f532121a92bf8 = L.circleMarker(
+                [31.49078489999999, -82.6319343],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f);
+        
+    
+        var popup_14ccf672700aa6b4017eb7bdbf7fa876 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_29c0c2069dc1a4474d2ae9f43eff13a5 = $(`<div id="html_29c0c2069dc1a4474d2ae9f43eff13a5" style="width: 100.0%; height: 100.0%;">         <b>Case Number:</b> H-300-22014-831909<br>         <b>Farm:</b> Burnham Berry Farms<br>         <b>Recruiter:</b> JS Mendoza<br>         <b>Retailers:</b> 99 cents, kroger, costco, whole foods, trader joe's, walmart, publix, meijer, etc.<br>         <b>Year:</b> 2022.0<br>         <b>Hit Status:</b> Hit<br>         <b>Certainty:</b> 3.0     </div>`)[0];
+                popup_14ccf672700aa6b4017eb7bdbf7fa876.setContent(html_29c0c2069dc1a4474d2ae9f43eff13a5);
+            
+        
+
+        circle_marker_837d0957816203f1569f532121a92bf8.bindPopup(popup_14ccf672700aa6b4017eb7bdbf7fa876)
+        ;
+
+        
+    
+    
+            var circle_marker_3ed54dd2202a5a495e4524d7ba2cc282 = L.circleMarker(
+                [32.135268, -82.313271],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f);
+        
+    
+        var popup_9730595a014e64edc2b3acd51cceb111 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_88df3311d2d61a18c9e5b44d6bb5e8f6 = $(`<div id="html_88df3311d2d61a18c9e5b44d6bb5e8f6" style="width: 100.0%; height: 100.0%;">         <b>Case Number:</b> H-300-20357-975271<br>         <b>Farm:</b> Smith Family Farms<br>         <b>Recruiter:</b> JS Mendoza<br>         <b>Retailers:</b> Dillons<br>         <b>Year:</b> 2021.0<br>         <b>Hit Status:</b> Hit<br>         <b>Certainty:</b> 2.0     </div>`)[0];
+                popup_9730595a014e64edc2b3acd51cceb111.setContent(html_88df3311d2d61a18c9e5b44d6bb5e8f6);
+            
+        
+
+        circle_marker_3ed54dd2202a5a495e4524d7ba2cc282.bindPopup(popup_9730595a014e64edc2b3acd51cceb111)
+        ;
+
+        
+    
+    
+            var circle_marker_bf8bd854130b933db3bc9e3bd21e01fb = L.circleMarker(
+                [31.4855312, -82.444244],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f);
+        
+    
+        var popup_bf4209e854d978d32959b30bceac7041 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3178232327bd0bc8b348c814a605a1eb = $(`<div id="html_3178232327bd0bc8b348c814a605a1eb" style="width: 100.0%; height: 100.0%;">         <b>Case Number:</b> H-300-21006-998351<br>         <b>Farm:</b> MP Aquino Harvesting, LLC<br>         <b>Recruiter:</b> JS Mendoza<br>         <b>Retailers:</b> Naturipe, Alpine Fresh<br>         <b>Year:</b> 2021.0<br>         <b>Hit Status:</b> Hit<br>         <b>Certainty:</b> 1.0     </div>`)[0];
+                popup_bf4209e854d978d32959b30bceac7041.setContent(html_3178232327bd0bc8b348c814a605a1eb);
+            
+        
+
+        circle_marker_bf8bd854130b933db3bc9e3bd21e01fb.bindPopup(popup_bf4209e854d978d32959b30bceac7041)
+        ;
+
+        
+    
+    
+            var circle_marker_be37e8ae0ababbd4046ceb974954bb4f = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f);
+        
+    
+        var popup_ea94192ecfbd9d820bfccefda9766acb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_605ae0f8f33bebfa910dbc385f7f6fa6 = $(`<div id="html_605ae0f8f33bebfa910dbc385f7f6fa6" style="width: 100.0%; height: 100.0%;">         <b>Case Number:</b> H-300-20009-241352<br>         <b>Farm:</b> (None found)<br>         <b>Recruiter:</b> JS Mendoza<br>         <b>Retailers:</b> Naturipe, Alpine Fresh<br>         <b>Year:</b> 2020.0<br>         <b>Hit Status:</b> Hit<br>         <b>Certainty:</b> 1.0     </div>`)[0];
+                popup_ea94192ecfbd9d820bfccefda9766acb.setContent(html_605ae0f8f33bebfa910dbc385f7f6fa6);
+            
+        
+
+        circle_marker_be37e8ae0ababbd4046ceb974954bb4f.bindPopup(popup_ea94192ecfbd9d820bfccefda9766acb)
+        ;
+
+        
+    
+    
+            var circle_marker_f5177a453f24527b5ec03418f6e6051c = L.circleMarker(
+                [31.9296525, -81.9041501],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f);
+        
+    
+        var popup_4b825db6d8f0278852f4b477abe6a011 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_851b8ed76658761bdb1ae8594ec31001 = $(`<div id="html_851b8ed76658761bdb1ae8594ec31001" style="width: 100.0%; height: 100.0%;">         <b>Case Number:</b> H-300-23086-881434<br>         <b>Farm:</b> G&R Farms<br>         <b>Recruiter:</b> M Saavedra - 3<br>         <b>Retailers:</b> King Soopers (from website pictures); G&R Farms is a direct to consumer retailer - customer reviews on google; Potential (from facebook followers): Schnucks; Growing retailers (participating retailers: Wegmens, Costco, Target, etc)<br>         <b>Year:</b> 2023.0<br>         <b>Hit Status:</b> Hit<br>         <b>Certainty:</b> 2.0     </div>`)[0];
+                popup_4b825db6d8f0278852f4b477abe6a011.setContent(html_851b8ed76658761bdb1ae8594ec31001);
+            
+        
+
+        circle_marker_f5177a453f24527b5ec03418f6e6051c.bindPopup(popup_4b825db6d8f0278852f4b477abe6a011)
+        ;
+
+        
+    
+    
+            var circle_marker_f29abe02f5a0ed2fe1c61a606191f455 = L.circleMarker(
+                [40.1026297, -102.228759],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f);
+        
+    
+        var popup_2a9d734ab1cb9efa861f47c8259f8e02 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_91a03b47557e5ac16cb91be9dbe735bf = $(`<div id="html_91a03b47557e5ac16cb91be9dbe735bf" style="width: 100.0%; height: 100.0%;">         <b>Case Number:</b> H-300-21253-577257<br>         <b>Farm:</b> Pro-Health, LLC<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Retailers:</b> Walmart, Meijer, HEB<br>         <b>Year:</b> 2022.0<br>         <b>Hit Status:</b> Hit<br>         <b>Certainty:</b> 0.0     </div>`)[0];
+                popup_2a9d734ab1cb9efa861f47c8259f8e02.setContent(html_91a03b47557e5ac16cb91be9dbe735bf);
+            
+        
+
+        circle_marker_f29abe02f5a0ed2fe1c61a606191f455.bindPopup(popup_2a9d734ab1cb9efa861f47c8259f8e02)
+        ;
+
+        
+    
+    
+            var circle_marker_f2efc9fc00b3957e679aeff6e05c67c2 = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f);
+        
+    
+        var popup_cd47b8253e453223fbd8970cd2e8d5a2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7ca41cce23729aa09b993349881ffb60 = $(`<div id="html_7ca41cce23729aa09b993349881ffb60" style="width: 100.0%; height: 100.0%;">         <b>Case Number:</b> H-300-20260-827359<br>         <b>Farm:</b> Red Sky Ag, LLC<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Retailers:</b> Costco, Weis Markets<br>         <b>Year:</b> 2021.0<br>         <b>Hit Status:</b> Hit<br>         <b>Certainty:</b> 0.0     </div>`)[0];
+                popup_cd47b8253e453223fbd8970cd2e8d5a2.setContent(html_7ca41cce23729aa09b993349881ffb60);
+            
+        
+
+        circle_marker_f2efc9fc00b3957e679aeff6e05c67c2.bindPopup(popup_cd47b8253e453223fbd8970cd2e8d5a2)
+        ;
+
+        
+    
+    
+            var circle_marker_077b01f77c7c5d53f2de50147f85c10f = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f);
+        
+    
+        var popup_bc55b2ce5ffb868872ee380755ad5a2f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_163a4226166cf22717193f9ca41e9f43 = $(`<div id="html_163a4226166cf22717193f9ca41e9f43" style="width: 100.0%; height: 100.0%;">         <b>Case Number:</b> H-300-20363-980683<br>         <b>Farm:</b> Farmers John Berries<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Retailers:</b> Publix<br>         <b>Year:</b> 2021.0<br>         <b>Hit Status:</b> Hit<br>         <b>Certainty:</b> 0.0     </div>`)[0];
+                popup_bc55b2ce5ffb868872ee380755ad5a2f.setContent(html_163a4226166cf22717193f9ca41e9f43);
+            
+        
+
+        circle_marker_077b01f77c7c5d53f2de50147f85c10f.bindPopup(popup_bc55b2ce5ffb868872ee380755ad5a2f)
+        ;
+
+        
+    
+    
+            var circle_marker_9a4db9b40c1d9a9848d826ba318eda66 = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f);
+        
+    
+        var popup_59d1283746041a3611eb361581d8392b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_177a01a70a1db664c9f98ac5390f2fde = $(`<div id="html_177a01a70a1db664c9f98ac5390f2fde" style="width: 100.0%; height: 100.0%;">         <b>Case Number:</b> H-300-21007-999949<br>         <b>Farm:</b> Berry Brothers<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Retailers:</b> Whole Foods<br>         <b>Year:</b> 2021.0<br>         <b>Hit Status:</b> Hit<br>         <b>Certainty:</b> 0.0     </div>`)[0];
+                popup_59d1283746041a3611eb361581d8392b.setContent(html_177a01a70a1db664c9f98ac5390f2fde);
+            
+        
+
+        circle_marker_9a4db9b40c1d9a9848d826ba318eda66.bindPopup(popup_59d1283746041a3611eb361581d8392b)
+        ;
+
+        
+    
+    
+            var circle_marker_6901699e600799f76aeadd506d8beb57 = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f);
+        
+    
+        var popup_d9d35ec3fd412c66ad13b075cd61d1f7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a308c73f93ca909904f8bca75ab3f4eb = $(`<div id="html_a308c73f93ca909904f8bca75ab3f4eb" style="width: 100.0%; height: 100.0%;">         <b>Case Number:</b> H-300-21026-033893<br>         <b>Farm:</b> CT Strickland Farms<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Retailers:</b> Walmart, Whole Foods<br>         <b>Year:</b> 2021.0<br>         <b>Hit Status:</b> Hit<br>         <b>Certainty:</b> 0.0     </div>`)[0];
+                popup_d9d35ec3fd412c66ad13b075cd61d1f7.setContent(html_a308c73f93ca909904f8bca75ab3f4eb);
+            
+        
+
+        circle_marker_6901699e600799f76aeadd506d8beb57.bindPopup(popup_d9d35ec3fd412c66ad13b075cd61d1f7)
+        ;
+
+        
+    
+    
+            var circle_marker_3f4138cf2aaa36ec6bbc131be0ddad66 = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f);
+        
+    
+        var popup_bff37cd638266467a0053f25e18ffc81 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5ae62ab89233da794622291331c0be2c = $(`<div id="html_5ae62ab89233da794622291331c0be2c" style="width: 100.0%; height: 100.0%;">         <b>Case Number:</b> H-300-21124-285763<br>         <b>Farm:</b> T&M Farms & Sons<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Retailers:</b> Kroger<br>         <b>Year:</b> 2021.0<br>         <b>Hit Status:</b> Hit<br>         <b>Certainty:</b> 0.0     </div>`)[0];
+                popup_bff37cd638266467a0053f25e18ffc81.setContent(html_5ae62ab89233da794622291331c0be2c);
+            
+        
+
+        circle_marker_3f4138cf2aaa36ec6bbc131be0ddad66.bindPopup(popup_bff37cd638266467a0053f25e18ffc81)
+        ;
+
+        
+    
+    
+            var circle_marker_2f1d27d5a7e71ab42a33a5de1cd56494 = L.circleMarker(
+                [36.0662772, -102.5198136],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f);
+        
+    
+        var popup_7f958bbc4b3542c626f4f6539aa0f5ae = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e6d30eeb6f7e2c4a43f4fd6b09895fa4 = $(`<div id="html_e6d30eeb6f7e2c4a43f4fd6b09895fa4" style="width: 100.0%; height: 100.0%;">         <b>Case Number:</b> H-300-21166-398136<br>         <b>Farm:</b> Lusk Onion<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Retailers:</b> HEB Walmart<br>         <b>Year:</b> 2021.0<br>         <b>Hit Status:</b> Hit<br>         <b>Certainty:</b> 0.0     </div>`)[0];
+                popup_7f958bbc4b3542c626f4f6539aa0f5ae.setContent(html_e6d30eeb6f7e2c4a43f4fd6b09895fa4);
+            
+        
+
+        circle_marker_2f1d27d5a7e71ab42a33a5de1cd56494.bindPopup(popup_7f958bbc4b3542c626f4f6539aa0f5ae)
+        ;
+
+        
+    
+    
+            var circle_marker_c78955e7a1648f07d21a33578e29ecbd = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f);
+        
+    
+        var popup_c5700a084df5fde174e2bd0d881d2fb5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_49890bf85f8903caf8fb9d422a0989e2 = $(`<div id="html_49890bf85f8903caf8fb9d422a0989e2" style="width: 100.0%; height: 100.0%;">         <b>Case Number:</b> H-300-20208-735658<br>         <b>Farm:</b> J&T Harvesting, LLC<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Retailers:</b> Mountain King: Aldi's (Florida), Walmart, Costco, Safeway, Sam's Club; Alpine Potato<br>         <b>Year:</b> 2020.0<br>         <b>Hit Status:</b> Hit<br>         <b>Certainty:</b> 0.0     </div>`)[0];
+                popup_c5700a084df5fde174e2bd0d881d2fb5.setContent(html_49890bf85f8903caf8fb9d422a0989e2);
+            
+        
+
+        circle_marker_c78955e7a1648f07d21a33578e29ecbd.bindPopup(popup_c5700a084df5fde174e2bd0d881d2fb5)
+        ;
+
+        
+    
+    
+            var circle_marker_42e8feadb085e8fa3f9796492cbf7ee4 = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f);
+        
+    
+        var popup_a3272cced36722b251c975b691ec9439 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ff6cd9f7460227ffdce25235187f8ff9 = $(`<div id="html_ff6cd9f7460227ffdce25235187f8ff9" style="width: 100.0%; height: 100.0%;">         <b>Case Number:</b> H-300-20150-611826<br>         <b>Farm:</b> Alex Olivares Harvesting, LLC<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Retailers:</b> Lusk Onion Co., Lusk Onions sells pumpkins to Brookshire's Food & Pharmacy, H-E-B, and Trader Joe's in the Texas area.<br>         <b>Year:</b> 2020.0<br>         <b>Hit Status:</b> Hit<br>         <b>Certainty:</b> 0.0     </div>`)[0];
+                popup_a3272cced36722b251c975b691ec9439.setContent(html_ff6cd9f7460227ffdce25235187f8ff9);
+            
+        
+
+        circle_marker_42e8feadb085e8fa3f9796492cbf7ee4.bindPopup(popup_a3272cced36722b251c975b691ec9439)
+        ;
+
+        
+    
+    
+            var circle_marker_2cd1e973f4b5d3fa6a8e8bf7ece1049b = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f);
+        
+    
+        var popup_19e797914940cb2e8adcafe1e14ddd13 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3c6efea2a0396fc5c9189787fd0067dc = $(`<div id="html_3c6efea2a0396fc5c9189787fd0067dc" style="width: 100.0%; height: 100.0%;">         <b>Case Number:</b> H-300-20051-337029<br>         <b>Farm:</b> J&T Harvesting, LLC<br>         <b>Recruiter:</b> B Bussey - 5<br>         <b>Retailers:</b> BJ's and Kroger<br>         <b>Year:</b> 2020.0<br>         <b>Hit Status:</b> Hit<br>         <b>Certainty:</b> 0.0     </div>`)[0];
+                popup_19e797914940cb2e8adcafe1e14ddd13.setContent(html_3c6efea2a0396fc5c9189787fd0067dc);
+            
+        
+
+        circle_marker_2cd1e973f4b5d3fa6a8e8bf7ece1049b.bindPopup(popup_19e797914940cb2e8adcafe1e14ddd13)
+        ;
+
+        
+    
+    
+            marker_cluster_2eb6f603ca527fd4a2100f53e0ac546f.addTo(map_03149e968a2aaf281c2e47fc95a472a7);
+        
+</script>
+</html>

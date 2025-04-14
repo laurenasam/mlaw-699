@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_28231cca24fa8eb5fe38107d04c304ea {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_28231cca24fa8eb5fe38107d04c304ea" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_28231cca24fa8eb5fe38107d04c304ea = L.map(
+                "map_28231cca24fa8eb5fe38107d04c304ea",
+                {
+                    center: [37.8, -96.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bb48ca5cf6d0afd68e292fb591567e58 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_bb48ca5cf6d0afd68e292fb591567e58.addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var circle_marker_c50a246aec1b243aebd04d399ab4431c = L.circleMarker(
+                [32.00823275, -82.56766464999998],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+        var popup_5d9ccecd1e56cae440491c4f13877983 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_56486dbea23296bdef86d38e418ded0c = $(`<div id="html_56486dbea23296bdef86d38e418ded0c" style="width: 100.0%; height: 100.0%;"><b>Recruiter:</b> D Mendoza - 1</div>`)[0];
+                popup_5d9ccecd1e56cae440491c4f13877983.setContent(html_56486dbea23296bdef86d38e418ded0c);
+            
+        
+
+        circle_marker_c50a246aec1b243aebd04d399ab4431c.bindPopup(popup_5d9ccecd1e56cae440491c4f13877983)
+        ;
+
+        
+    
+    
+            var circle_marker_659207f25eb0f3b89c60c4dbedee29e3 = L.circleMarker(
+                [32.1572515, -82.50607737499999],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+        var popup_1a64d5a4074be525b079ac354ecf2048 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_82363ddddfd35a97f9ba7a73a5907d21 = $(`<div id="html_82363ddddfd35a97f9ba7a73a5907d21" style="width: 100.0%; height: 100.0%;"><b>Recruiter:</b> JS Mendoza</div>`)[0];
+                popup_1a64d5a4074be525b079ac354ecf2048.setContent(html_82363ddddfd35a97f9ba7a73a5907d21);
+            
+        
+
+        circle_marker_659207f25eb0f3b89c60c4dbedee29e3.bindPopup(popup_1a64d5a4074be525b079ac354ecf2048)
+        ;
+
+        
+    
+    
+            var circle_marker_45cbcf849fecca41d87bf0fe90b18682 = L.circleMarker(
+                [32.4296525, -81.9041501],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+        var popup_d6171bd2634219caa071d5dfeae337d1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_71958e3eed600397da7839482602b308 = $(`<div id="html_71958e3eed600397da7839482602b308" style="width: 100.0%; height: 100.0%;"><b>Recruiter:</b> M Saavedra - 3</div>`)[0];
+                popup_d6171bd2634219caa071d5dfeae337d1.setContent(html_71958e3eed600397da7839482602b308);
+            
+        
+
+        circle_marker_45cbcf849fecca41d87bf0fe90b18682.bindPopup(popup_d6171bd2634219caa071d5dfeae337d1)
+        ;
+
+        
+    
+    
+            var circle_marker_55a87c49af5d88880dac88e1f82bcae1 = L.circleMarker(
+                [33.33082820999999, -86.58274542000001],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+        var popup_51ff56899945585426018bc31e4e45ef = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_96d51596da49c9e8595a00e5c9e65cd6 = $(`<div id="html_96d51596da49c9e8595a00e5c9e65cd6" style="width: 100.0%; height: 100.0%;"><b>Recruiter:</b> B Bussey - 5</div>`)[0];
+                popup_51ff56899945585426018bc31e4e45ef.setContent(html_96d51596da49c9e8595a00e5c9e65cd6);
+            
+        
+
+        circle_marker_55a87c49af5d88880dac88e1f82bcae1.bindPopup(popup_51ff56899945585426018bc31e4e45ef)
+        ;
+
+        
+    
+    
+            var marker_cluster_aee7e723191a950133971332a0ac706e = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_3dc8ab39089620f47a19b8155c996e2a = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_aee7e723191a950133971332a0ac706e);
+        
+    
+        var popup_957d49362da9a2a3dd5ce505d9608f5b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f8c4ff472cf4a55f1d358946f993a6f7 = $(`<div id="html_f8c4ff472cf4a55f1d358946f993a6f7" style="width: 100.0%; height: 100.0%;">     <b>Case Number:</b> H-300-20013-248635<br>     <b>Farm:</b> Down South Berries LLC<br>     <b>Market:</b> Naturipe Farms, 99 Cents Only Stores, Ahold, Aldi, AWG, Bashas, Big Y, Charlie's Produce, Costco, Delhaize, Dollar General, Food Lion, Giant Eagle, Harris Teeter, H.E.B., H-Mart, Jewel, K-VA-T Food Stores, King Soopers, Kroger, Loblaw, Market Basket, Meijer, Publix, Raley's, Roundy's, Safeway, Sam's Club, Save Mart, Sendik's Food Markets, Shaw's, Sobeys, SpartanNash, Sprouts Farmers Market, Super, Target, Supervalu, Trader Joe's, Walmart, Wegmans, Whole Foods, and WinCo<br>     <b>Year:</b> 2020.0<br>     <a href="https://seasonaljobs.dol.gov/api/job-order/H-300-20013-248635" target="_blank">View H-2A Job</a>     </div>`)[0];
+                popup_957d49362da9a2a3dd5ce505d9608f5b.setContent(html_f8c4ff472cf4a55f1d358946f993a6f7);
+            
+        
+
+        circle_marker_3dc8ab39089620f47a19b8155c996e2a.bindPopup(popup_957d49362da9a2a3dd5ce505d9608f5b)
+        ;
+
+        
+    
+    
+            var circle_marker_0f633f288b76285cc5fcce2d50b1e266 = L.circleMarker(
+                [31.4990436, -82.50046909999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_aee7e723191a950133971332a0ac706e);
+        
+    
+        var popup_5d5eb0e67b531554ee9ac56c577dbf4f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9adab3b61396daebae8da0070f30f056 = $(`<div id="html_9adab3b61396daebae8da0070f30f056" style="width: 100.0%; height: 100.0%;">     <b>Case Number:</b> H-300-20002-228933<br>     <b>Farm:</b> L&S Farm<br>     <b>Market:</b> Store Locator – sealtheseasons, Peoples-Food Ann Arbor, Plum Market, Zerbo's.<br>     <b>Year:</b> 2020.0<br>     <a href="https://seasonaljobs.dol.gov/api/job-order/H-300-20002-228933" target="_blank">View H-2A Job</a>     </div>`)[0];
+                popup_5d5eb0e67b531554ee9ac56c577dbf4f.setContent(html_9adab3b61396daebae8da0070f30f056);
+            
+        
+
+        circle_marker_0f633f288b76285cc5fcce2d50b1e266.bindPopup(popup_5d5eb0e67b531554ee9ac56c577dbf4f)
+        ;
+
+        
+    
+    
+            var circle_marker_1542974c757818362d6659b0431775c8 = L.circleMarker(
+                [31.49078489999999, -82.6319343],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_aee7e723191a950133971332a0ac706e);
+        
+    
+        var popup_f767ba7c935f05094877dce0bd7eed43 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0187c52d78b2ac78e9d4d5a783c03f43 = $(`<div id="html_0187c52d78b2ac78e9d4d5a783c03f43" style="width: 100.0%; height: 100.0%;">     <b>Case Number:</b> H-300-22014-831909<br>     <b>Farm:</b> Burnham Berry Farms<br>     <b>Market:</b> 99 cents, kroger, costco, whole foods, trader joe's, walmart, publix, meijer, etc.<br>     <b>Year:</b> 2022.0<br>     <a href="https://seasonaljobs.dol.gov/api/job-order/H-300-22014-831909" target="_blank">View H-2A Job</a>     </div>`)[0];
+                popup_f767ba7c935f05094877dce0bd7eed43.setContent(html_0187c52d78b2ac78e9d4d5a783c03f43);
+            
+        
+
+        circle_marker_1542974c757818362d6659b0431775c8.bindPopup(popup_f767ba7c935f05094877dce0bd7eed43)
+        ;
+
+        
+    
+    
+            var circle_marker_1bcd1c1482f814a72597a4e522d5d567 = L.circleMarker(
+                [32.135268, -82.313271],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_aee7e723191a950133971332a0ac706e);
+        
+    
+        var popup_2fdb67c5e1612df80a0a44c27c8d00aa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_54bff6ee553991f126d6c6a052a1a46c = $(`<div id="html_54bff6ee553991f126d6c6a052a1a46c" style="width: 100.0%; height: 100.0%;">     <b>Case Number:</b> H-300-20357-975271<br>     <b>Farm:</b> Smith Family Farms<br>     <b>Market:</b> Dillons<br>     <b>Year:</b> 2021.0<br>     <a href="https://seasonaljobs.dol.gov/api/job-order/H-300-20357-975271" target="_blank">View H-2A Job</a>     </div>`)[0];
+                popup_2fdb67c5e1612df80a0a44c27c8d00aa.setContent(html_54bff6ee553991f126d6c6a052a1a46c);
+            
+        
+
+        circle_marker_1bcd1c1482f814a72597a4e522d5d567.bindPopup(popup_2fdb67c5e1612df80a0a44c27c8d00aa)
+        ;
+
+        
+    
+    
+            var circle_marker_b5f6ae446156b372dd6884802b88c6fb = L.circleMarker(
+                [31.4855312, -82.444244],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_aee7e723191a950133971332a0ac706e);
+        
+    
+        var popup_df67055225666b377f0d0f851bda6234 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_08fef736362b4c2f9769aa922285f39b = $(`<div id="html_08fef736362b4c2f9769aa922285f39b" style="width: 100.0%; height: 100.0%;">     <b>Case Number:</b> H-300-21006-998351<br>     <b>Farm:</b> MP Aquino Harvesting, LLC<br>     <b>Market:</b> Naturipe, Alpine Fresh<br>     <b>Year:</b> 2021.0<br>     <a href="https://seasonaljobs.dol.gov/api/job-order/H-300-21006-998351" target="_blank">View H-2A Job</a>     </div>`)[0];
+                popup_df67055225666b377f0d0f851bda6234.setContent(html_08fef736362b4c2f9769aa922285f39b);
+            
+        
+
+        circle_marker_b5f6ae446156b372dd6884802b88c6fb.bindPopup(popup_df67055225666b377f0d0f851bda6234)
+        ;
+
+        
+    
+    
+            var circle_marker_ef33a7909608d25e81c3f824293a78c3 = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_aee7e723191a950133971332a0ac706e);
+        
+    
+        var popup_78bc02727464022e7e982f0e09bc1e45 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6fdd92d844be3572c9b40d69ad8d07b7 = $(`<div id="html_6fdd92d844be3572c9b40d69ad8d07b7" style="width: 100.0%; height: 100.0%;">     <b>Case Number:</b> H-300-20009-241352<br>     <b>Farm:</b> (None found)<br>     <b>Market:</b> Naturipe, Alpine Fresh<br>     <b>Year:</b> 2020.0<br>     <a href="https://seasonaljobs.dol.gov/api/job-order/H-300-20009-241352" target="_blank">View H-2A Job</a>     </div>`)[0];
+                popup_78bc02727464022e7e982f0e09bc1e45.setContent(html_6fdd92d844be3572c9b40d69ad8d07b7);
+            
+        
+
+        circle_marker_ef33a7909608d25e81c3f824293a78c3.bindPopup(popup_78bc02727464022e7e982f0e09bc1e45)
+        ;
+
+        
+    
+    
+            var circle_marker_9b8b9e13dc417246948093f68596a32d = L.circleMarker(
+                [31.9296525, -81.9041501],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_aee7e723191a950133971332a0ac706e);
+        
+    
+        var popup_d6fbb3c66dece95a0d306c1f20a5ce17 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dd16e41b4b6d4539469877f9ab1feca6 = $(`<div id="html_dd16e41b4b6d4539469877f9ab1feca6" style="width: 100.0%; height: 100.0%;">     <b>Case Number:</b> H-300-23086-881434<br>     <b>Farm:</b> G&R Farms<br>     <b>Market:</b> King Soopers (from website pictures); G&R Farms is a direct to consumer retailer - customer reviews on google; Potential (from facebook followers): Schnucks; Growing retailers (participating retailers: Wegmens, Costco, Target, etc)<br>     <b>Year:</b> 2023.0<br>     <a href="https://seasonaljobs.dol.gov/api/job-order/H-300-23086-881434" target="_blank">View H-2A Job</a>     </div>`)[0];
+                popup_d6fbb3c66dece95a0d306c1f20a5ce17.setContent(html_dd16e41b4b6d4539469877f9ab1feca6);
+            
+        
+
+        circle_marker_9b8b9e13dc417246948093f68596a32d.bindPopup(popup_d6fbb3c66dece95a0d306c1f20a5ce17)
+        ;
+
+        
+    
+    
+            var circle_marker_e4ad983b0800f55a282ebebd1d1cf0fc = L.circleMarker(
+                [40.1026297, -102.228759],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_aee7e723191a950133971332a0ac706e);
+        
+    
+        var popup_f95aab328a9aae2a7fdcf8f5c1590818 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d14831c6fa82cf8cb978aa640237360b = $(`<div id="html_d14831c6fa82cf8cb978aa640237360b" style="width: 100.0%; height: 100.0%;">     <b>Case Number:</b> H-300-21253-577257<br>     <b>Farm:</b> Pro-Health, LLC<br>     <b>Market:</b> Walmart, Meijer, HEB<br>     <b>Year:</b> 2022.0<br>     <a href="https://seasonaljobs.dol.gov/api/job-order/H-300-21253-577257" target="_blank">View H-2A Job</a>     </div>`)[0];
+                popup_f95aab328a9aae2a7fdcf8f5c1590818.setContent(html_d14831c6fa82cf8cb978aa640237360b);
+            
+        
+
+        circle_marker_e4ad983b0800f55a282ebebd1d1cf0fc.bindPopup(popup_f95aab328a9aae2a7fdcf8f5c1590818)
+        ;
+
+        
+    
+    
+            var circle_marker_53c6c534211c467051d43e879f780b16 = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_aee7e723191a950133971332a0ac706e);
+        
+    
+        var popup_f133bf14ce20f9f6c299b656edafb80a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6873e2b74274a6bd50bc213240bdbe05 = $(`<div id="html_6873e2b74274a6bd50bc213240bdbe05" style="width: 100.0%; height: 100.0%;">     <b>Case Number:</b> H-300-20260-827359<br>     <b>Farm:</b> Red Sky Ag, LLC<br>     <b>Market:</b> Costco, Weis Markets<br>     <b>Year:</b> 2021.0<br>     <a href="https://seasonaljobs.dol.gov/api/job-order/H-300-20260-827359" target="_blank">View H-2A Job</a>     </div>`)[0];
+                popup_f133bf14ce20f9f6c299b656edafb80a.setContent(html_6873e2b74274a6bd50bc213240bdbe05);
+            
+        
+
+        circle_marker_53c6c534211c467051d43e879f780b16.bindPopup(popup_f133bf14ce20f9f6c299b656edafb80a)
+        ;
+
+        
+    
+    
+            var circle_marker_aeaa10ffeeffb30304c049ad26225c6b = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_aee7e723191a950133971332a0ac706e);
+        
+    
+        var popup_c259b70251fb03bb31c8875412416b3f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e39800ecc3e3a65a52de5dc3266d13b0 = $(`<div id="html_e39800ecc3e3a65a52de5dc3266d13b0" style="width: 100.0%; height: 100.0%;">     <b>Case Number:</b> H-300-20363-980683<br>     <b>Farm:</b> Farmers John Berries<br>     <b>Market:</b> Publix<br>     <b>Year:</b> 2021.0<br>     <a href="https://seasonaljobs.dol.gov/api/job-order/H-300-20363-980683" target="_blank">View H-2A Job</a>     </div>`)[0];
+                popup_c259b70251fb03bb31c8875412416b3f.setContent(html_e39800ecc3e3a65a52de5dc3266d13b0);
+            
+        
+
+        circle_marker_aeaa10ffeeffb30304c049ad26225c6b.bindPopup(popup_c259b70251fb03bb31c8875412416b3f)
+        ;
+
+        
+    
+    
+            var circle_marker_190d866c114ea8fa831b311fb62516c3 = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_aee7e723191a950133971332a0ac706e);
+        
+    
+        var popup_3cb2e57d5da947a704c6fbaad02185c1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_aecdae436b1a267c305f6de9931cc90e = $(`<div id="html_aecdae436b1a267c305f6de9931cc90e" style="width: 100.0%; height: 100.0%;">     <b>Case Number:</b> H-300-21007-999949<br>     <b>Farm:</b> Berry Brothers<br>     <b>Market:</b> Whole Foods<br>     <b>Year:</b> 2021.0<br>     <a href="https://seasonaljobs.dol.gov/api/job-order/H-300-21007-999949" target="_blank">View H-2A Job</a>     </div>`)[0];
+                popup_3cb2e57d5da947a704c6fbaad02185c1.setContent(html_aecdae436b1a267c305f6de9931cc90e);
+            
+        
+
+        circle_marker_190d866c114ea8fa831b311fb62516c3.bindPopup(popup_3cb2e57d5da947a704c6fbaad02185c1)
+        ;
+
+        
+    
+    
+            var circle_marker_bb140db82319244ebb0a6e039bac8110 = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_aee7e723191a950133971332a0ac706e);
+        
+    
+        var popup_def4de727ebe4f01c074304a655997f4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1075cc7a58db1cf5a0bae4f46194d8da = $(`<div id="html_1075cc7a58db1cf5a0bae4f46194d8da" style="width: 100.0%; height: 100.0%;">     <b>Case Number:</b> H-300-21026-033893<br>     <b>Farm:</b> CT Strickland Farms<br>     <b>Market:</b> Walmart, Whole Foods<br>     <b>Year:</b> 2021.0<br>     <a href="https://seasonaljobs.dol.gov/api/job-order/H-300-21026-033893" target="_blank">View H-2A Job</a>     </div>`)[0];
+                popup_def4de727ebe4f01c074304a655997f4.setContent(html_1075cc7a58db1cf5a0bae4f46194d8da);
+            
+        
+
+        circle_marker_bb140db82319244ebb0a6e039bac8110.bindPopup(popup_def4de727ebe4f01c074304a655997f4)
+        ;
+
+        
+    
+    
+            var circle_marker_50d2cbd16f9d240f9a3c3adfb7ed112d = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_aee7e723191a950133971332a0ac706e);
+        
+    
+        var popup_f3c533c5e92aca4ed72344cbf5219778 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ac2e7761329fad55eb32119a9eaadfcb = $(`<div id="html_ac2e7761329fad55eb32119a9eaadfcb" style="width: 100.0%; height: 100.0%;">     <b>Case Number:</b> H-300-21124-285763<br>     <b>Farm:</b> T&M Farms & Sons<br>     <b>Market:</b> Kroger<br>     <b>Year:</b> 2021.0<br>     <a href="https://seasonaljobs.dol.gov/api/job-order/H-300-21124-285763" target="_blank">View H-2A Job</a>     </div>`)[0];
+                popup_f3c533c5e92aca4ed72344cbf5219778.setContent(html_ac2e7761329fad55eb32119a9eaadfcb);
+            
+        
+
+        circle_marker_50d2cbd16f9d240f9a3c3adfb7ed112d.bindPopup(popup_f3c533c5e92aca4ed72344cbf5219778)
+        ;
+
+        
+    
+    
+            var circle_marker_e7a3b0cf6ff4fc0fcdfdd9d565c0442a = L.circleMarker(
+                [36.0662772, -102.5198136],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_aee7e723191a950133971332a0ac706e);
+        
+    
+        var popup_fb621ec2dc02385528d42278d3be9b7e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7cbeeb5c9b63ce9a26c5689e833926b5 = $(`<div id="html_7cbeeb5c9b63ce9a26c5689e833926b5" style="width: 100.0%; height: 100.0%;">     <b>Case Number:</b> H-300-21166-398136<br>     <b>Farm:</b> Lusk Onion<br>     <b>Market:</b> HEB Walmart<br>     <b>Year:</b> 2021.0<br>     <a href="https://seasonaljobs.dol.gov/api/job-order/H-300-21166-398136" target="_blank">View H-2A Job</a>     </div>`)[0];
+                popup_fb621ec2dc02385528d42278d3be9b7e.setContent(html_7cbeeb5c9b63ce9a26c5689e833926b5);
+            
+        
+
+        circle_marker_e7a3b0cf6ff4fc0fcdfdd9d565c0442a.bindPopup(popup_fb621ec2dc02385528d42278d3be9b7e)
+        ;
+
+        
+    
+    
+            var circle_marker_3dbf56d7582837a89220bf3fe8b7c27f = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_aee7e723191a950133971332a0ac706e);
+        
+    
+        var popup_3c50853532f1e93dcdb593d7a22b2ee1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a009854f7fae81153beda3f334191733 = $(`<div id="html_a009854f7fae81153beda3f334191733" style="width: 100.0%; height: 100.0%;">     <b>Case Number:</b> H-300-20208-735658<br>     <b>Farm:</b> J&T Harvesting, LLC<br>     <b>Market:</b> Mountain King: Aldi's (Florida), Walmart, Costco, Safeway, Sam's Club; Alpine Potato<br>     <b>Year:</b> 2020.0<br>     <a href="https://seasonaljobs.dol.gov/api/job-order/H-300-20208-735658" target="_blank">View H-2A Job</a>     </div>`)[0];
+                popup_3c50853532f1e93dcdb593d7a22b2ee1.setContent(html_a009854f7fae81153beda3f334191733);
+            
+        
+
+        circle_marker_3dbf56d7582837a89220bf3fe8b7c27f.bindPopup(popup_3c50853532f1e93dcdb593d7a22b2ee1)
+        ;
+
+        
+    
+    
+            var circle_marker_f19aaee5a54bfa3ec322970af471fe15 = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_aee7e723191a950133971332a0ac706e);
+        
+    
+        var popup_51c7e1c10b9ba509bb44d4c0d61d9490 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b829474cfcbf2309008e8f77269f48ca = $(`<div id="html_b829474cfcbf2309008e8f77269f48ca" style="width: 100.0%; height: 100.0%;">     <b>Case Number:</b> H-300-20150-611826<br>     <b>Farm:</b> Alex Olivares Harvesting, LLC<br>     <b>Market:</b> Lusk Onion Co., Lusk Onions sells pumpkins to Brookshire's Food & Pharmacy, H-E-B, and Trader Joe's in the Texas area.<br>     <b>Year:</b> 2020.0<br>     <a href="https://seasonaljobs.dol.gov/api/job-order/H-300-20150-611826" target="_blank">View H-2A Job</a>     </div>`)[0];
+                popup_51c7e1c10b9ba509bb44d4c0d61d9490.setContent(html_b829474cfcbf2309008e8f77269f48ca);
+            
+        
+
+        circle_marker_f19aaee5a54bfa3ec322970af471fe15.bindPopup(popup_51c7e1c10b9ba509bb44d4c0d61d9490)
+        ;
+
+        
+    
+    
+            var circle_marker_e99a98f92f692e339f92860c2ec748b2 = L.circleMarker(
+                [31.5174219, -82.63486019999999],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_aee7e723191a950133971332a0ac706e);
+        
+    
+        var popup_902c2929189e65739a6c41c3ae6b2070 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_eb466c337a7eb5b638df359cd692f123 = $(`<div id="html_eb466c337a7eb5b638df359cd692f123" style="width: 100.0%; height: 100.0%;">     <b>Case Number:</b> H-300-20051-337029<br>     <b>Farm:</b> J&T Harvesting, LLC<br>     <b>Market:</b> BJ's and Kroger<br>     <b>Year:</b> 2020.0<br>     <a href="https://seasonaljobs.dol.gov/api/job-order/H-300-20051-337029" target="_blank">View H-2A Job</a>     </div>`)[0];
+                popup_902c2929189e65739a6c41c3ae6b2070.setContent(html_eb466c337a7eb5b638df359cd692f123);
+            
+        
+
+        circle_marker_e99a98f92f692e339f92860c2ec748b2.bindPopup(popup_902c2929189e65739a6c41c3ae6b2070)
+        ;
+
+        
+    
+    
+            marker_cluster_aee7e723191a950133971332a0ac706e.addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var poly_line_c6791de100d23ccfcc06543202aef0b9 = L.polyline(
+                [[32.00823275, -82.56766464999998], [31.5174219, -82.63486019999999]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var poly_line_66f514816beba6519c2e90c7f15dd2ca = L.polyline(
+                [[32.00823275, -82.56766464999998], [31.4990436, -82.50046909999999]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var poly_line_1203abe231925222f2348c8219ca3924 = L.polyline(
+                [[32.1572515, -82.50607737499999], [31.49078489999999, -82.6319343]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var poly_line_a03b275a18577e5c7ac7643f20deadbd = L.polyline(
+                [[32.1572515, -82.50607737499999], [32.135268, -82.313271]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var poly_line_e71e7b5ac0996c9c547bb7a859b06ddf = L.polyline(
+                [[32.1572515, -82.50607737499999], [31.4855312, -82.444244]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var poly_line_b66ff0b182c2ec2d75d7b3cdf090e401 = L.polyline(
+                [[32.1572515, -82.50607737499999], [31.5174219, -82.63486019999999]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var poly_line_ea6964cee463fba09fc9658f6d28edf7 = L.polyline(
+                [[32.4296525, -81.9041501], [31.9296525, -81.9041501]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var poly_line_c59b0b9c0597658f333e459280b559f0 = L.polyline(
+                [[33.33082820999999, -86.58274542000001], [40.1026297, -102.228759]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var poly_line_188d2bc0e8fdba75eef2d54431fd3e53 = L.polyline(
+                [[33.33082820999999, -86.58274542000001], [31.5174219, -82.63486019999999]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var poly_line_7aedb185c7e5547b99a4a622c4cb25cb = L.polyline(
+                [[33.33082820999999, -86.58274542000001], [31.5174219, -82.63486019999999]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var poly_line_32316a332c8270cd0d03871ae7786ae3 = L.polyline(
+                [[33.33082820999999, -86.58274542000001], [31.5174219, -82.63486019999999]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var poly_line_c42730bb61a7414686112f1e4114899b = L.polyline(
+                [[33.33082820999999, -86.58274542000001], [31.5174219, -82.63486019999999]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var poly_line_4f6ff30225306bf950c92a0e2334b62f = L.polyline(
+                [[33.33082820999999, -86.58274542000001], [31.5174219, -82.63486019999999]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var poly_line_33d8f7d9f749407b9d6fd1c5f7f25290 = L.polyline(
+                [[33.33082820999999, -86.58274542000001], [36.0662772, -102.5198136]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var poly_line_ccfb955b44af18a6568197a9341a5f73 = L.polyline(
+                [[33.33082820999999, -86.58274542000001], [31.5174219, -82.63486019999999]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var poly_line_880f5149493a26e713a8c56f0cabd9ab = L.polyline(
+                [[33.33082820999999, -86.58274542000001], [31.5174219, -82.63486019999999]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+    
+            var poly_line_0230d817e3e340d6ad418a17250f60f7 = L.polyline(
+                [[33.33082820999999, -86.58274542000001], [31.5174219, -82.63486019999999]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_28231cca24fa8eb5fe38107d04c304ea);
+        
+</script>
+</html>
