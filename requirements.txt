@@ -1,1 +1,9 @@
 pyarrow
+streamlit
+pandas
+folium
+streamlit-folium
+wordcloud
+matplotlib
+networkx
+plotly

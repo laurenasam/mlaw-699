@@ -270,7 +270,7 @@ with tab2:
     st.subheader("📄 H-2A Orders Table")
 
     df_table = filtered_df.copy()
-    df_table["Link"] = df_table["link_to_h2a"].apply(lambda x: f"[View Order]({x})")
+    df_table["Link"] = df_table["link_to_h2a"].apply(lambda x: f'<a href="{x}" target="_blank">View Order</a>')
     df_table = df_table.drop(columns=["link_to_h2a"])
     df_table.columns = df_table.columns.str.replace("_", " ").str.title()
 
@@ -281,11 +281,10 @@ with tab2:
         default=df_table.columns.tolist(),
     )
 
-    st.dataframe(
-        df_table[cols],
-        use_container_width=True,
-        height=600
-    )
+    st.markdown(
+    df_table[cols].to_html(escape=False, index=False),
+    unsafe_allow_html=True
+)
 
 # ---------- WORD CLOUD ----------
 with tab3:
