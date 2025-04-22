@@ -1,0 +1,7 @@
+# .streamlit/config.toml
+[server]
+headless = true
+
+[general]
+# Update this to the correct main script
+mainModule = "app-src/dashboard.py"
