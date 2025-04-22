@@ -141,7 +141,7 @@ with st.sidebar:
 st.title("🧅 H-2A Job Order Explorer")
 
 # ---------- LOAD DATA ----------
-df = pd.read_csv("ONION-MASTER.csv")
+df = pd.read_csv("outputs/ONION-MASTER.csv")
 df.columns = df.columns.str.lower().str.replace(" ", "_")
 df = df.rename(columns={"best_address": "address", "recruiter_cleaned": "recruiter"})
 df = df.drop(columns=["person", "hit_or_no_hit", "has_facebook"], errors="ignore")
