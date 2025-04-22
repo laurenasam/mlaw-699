@@ -16,4 +16,3 @@ This project extracts and visualizes structured data from H-2A job order listing
   - Retailer diversity chart
 
 ## Link to Dashboard: https://mlaw-699.streamlit.app/
->>>>>>> a3c5ff8 (Add Streamlit config + updated dashboard + readme)
