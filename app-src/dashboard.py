@@ -11,118 +11,59 @@ import plotly.express as px
 import plotly.graph_objects as go
 from collections import Counter
 
+# Secure API key
+API_KEY = st.secrets["api_key"]
 
-# Set up Streamlit page config
+# Set page config
 st.set_page_config(
     page_title="🧅 H-2A Job Order Explorer",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-st.markdown(
+MAIZE = "#FFCB05"
+BLUE = "#00274C"
+
+# Custom Styles
+custom_css = [
     """
     <style>
-    /* Reduce top padding */
-    .block-container {
-        padding-top: 1rem !important;
-    }
-
-    /* Make selected tab underline maize or blue */
-    div[data-baseweb="tab-highlight"] {
-        background-color: #00274C !important;  /* Use #FFCB05 for maize */
-    }
-
-    /* Improve selected tab font color */
+    .block-container { padding-top: 1rem !important; }
+    div[data-baseweb="tab-highlight"] { background-color: #00274C !important; }
     div[data-baseweb="tab"] button[aria-selected="true"] {
         color: #00274C !important;
         font-weight: 600 !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    """
-    <style>
-    div[data-baseweb="tab"] button[role="tab"][aria-selected="true"] {
         border-bottom: 3px solid #FFCB05 !important;
-        color: #00274C !important;
-        font-weight: 600 !important;
     }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    """
-    <style>
-    div[data-baseweb="tab"] button[role="tab"][aria-selected="true"] {
-        border-bottom: 3px solid #FFCB05 !important;
-        color: #00274C !important;
-        font-weight: 600 !important;
+    section[data-testid="stSidebar"] * { color: white; }
+    body {
+        font-family: \"Helvetica Neue\", sans-serif;
     }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-
-with st.sidebar:
-    st.image("block-m.png", width=100)
-st.markdown("""
-    <style>
-        section[data-testid="stSidebar"] * {
-            color: white;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-
-st.markdown("""
-    <style>
-        body {
-            font-family: "Helvetica Neue", sans-serif;
-        }
-        .stButton>button {
-            background-color: #FFCB05;
-            color: black;
-            border: none;
-            font-weight: 600;
-        }
-        .stMultiSelect>div>div {
-            background-color: #FFCB05 !important;
-            color: black !important;
-        }
-        .stTabs [data-baseweb="tab"] {
-            font-weight: bold;
-            color: #00274C;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-
-st.markdown("""
-    <style>
-    /* === Multiselect / Dropdown Maize & Blue Theme === */
-
-    /* Tag (selected filter) background & text */
+    .stButton>button {
+        background-color: #FFCB05;
+        color: black;
+        border: none;
+        font-weight: 600;
+    }
+    .stMultiSelect>div>div {
+        background-color: #FFCB05 !important;
+        color: black !important;
+    }
+    .stTabs [data-baseweb="tab"] {
+        font-weight: bold;
+        color: #00274C;
+    }
     div[data-baseweb="tag"] {
-        background-color: #FFCB05 !important;  /* Maize */
-        color: #00274C !important;             /* Michigan Blue text */
+        background-color: #FFCB05 !important;
+        color: #00274C !important;
         border-radius: 8px !important;
         font-weight: 600 !important;
         border: 1.5px solid #00274C !important;
     }
-
-    /* Tag close "X" icon */
     div[data-baseweb="tag"] span[aria-hidden="true"] {
         color: #00274C !important;
         font-weight: bold;
     }
-
-    /* Dropdown input box styling */
     .stMultiSelect > div, .stSelectbox > div {
         background-color: white !important;
         border: 2px solid #00274C !important;
@@ -130,81 +71,73 @@ st.markdown("""
         color: #00274C !important;
         box-shadow: none !important;
     }
-
-    /* Dropdown label text */
     label, .st-bx, .st-ag {
         color: #00274C !important;
         font-weight: bold !important;
     }
-
-    /* Dropdown hover styling */
     div[data-baseweb="option"]:hover {
         background-color: #FFCB05 !important;
         color: #00274C !important;
     }
-
-    /* Force font color for tag content */
     div[data-baseweb="tag"] span {
         color: #00274C !important;
     }
-    </style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-    <style>
-    /* Maize color for dropdown section titles */
     .stMultiSelect label, .stSelectbox label {
-        color: #FFCB05 !important;  /* Maize */
+        color: #FFCB05 !important;
         font-weight: bold !important;
         font-size: 15px !important;
     }
-    </style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-    <style>
-    /* Light background behind folium map */
     .stContainer > iframe {
         background-color: white !important;
     }
-
-    /* Remove any padding or margin around folium container */
     .element-container:has(> iframe) {
         padding: 0 !important;
         margin: 0 !important;
         background-color: white !important;
     }
+    .stApp {
+        background-color: white;
+        color: #00274C;
+    }
+    .css-1d391kg .e1fqkh3o4,
+    .css-1v3fvcr,
+    .st-bw,
+    .st-eb {
+        color: #00274C !important;
+    }
+    /* Sidebar-specific multiselect tag styling override */
+    section[data-testid="stSidebar"] div[data-baseweb="tag"] {
+        background-color: #FFCB05 !important;
+        color: #00274C !important;
+        border-radius: 8px !important;
+        font-weight: 600 !important;
+        border: 2px solid #00274C !important;
+        padding: 3px 8px !important;
+    }
+    section[data-testid="stSidebar"] div[data-baseweb="tag"] span {
+        color: #00274C !important;
+        font-weight: bold !important;
+    }
+    section[data-testid="stSidebar"] div[data-baseweb="tag"] span[aria-hidden="true"] {
+        color: #00274C !important;
+        font-weight: bold !important;
+    }
+    section[data-testid="stSidebar"] div[data-baseweb="tag"] svg {
+        fill: #00274C !important;
+    }
     </style>
-""", unsafe_allow_html=True)
+    """
+]
 
 
-# Define colors
-MAIZE = "#FFCB05"
-BLUE = "#00274C"
+for css in custom_css:
+    st.markdown(css, unsafe_allow_html=True)
 
-# ---------- STYLE ----------
-st.markdown(f"""
-    <style>
-        .stApp {{
-            background-color: white;
-            color: {BLUE};
-        }}
-        .css-1d391kg .e1fqkh3o4 {{
-            color: {BLUE};
-        }}
-        .css-1v3fvcr {{
-            color: {BLUE};
-        }}
-        .st-bw {{
-            background-color: {MAIZE} !important;
-            color: {BLUE} !important;
-        }}
-        .st-eb {{
-            color: {BLUE} !important;
-        }}
-    </style>
-""", unsafe_allow_html=True)
+# Sidebar
+with st.sidebar:
+    st.image("block-m.png", width=100)
 
+# Title
 st.title("🧅 H-2A Job Order Explorer")
 
 # ---------- LOAD DATA ----------
@@ -562,7 +495,7 @@ with tab6:
         st.plotly_chart(fig, use_container_width=True)
 
     except Exception as e:
-        st.error(f"❌ Failed to render Recruiter→Farm Sankey: {e}")
+        st.error(f"Failed to render Recruiter→Farm Sankey: {e}")
 
     st.markdown("---")
 
@@ -625,9 +558,10 @@ with tab6:
         st.plotly_chart(sankey_fig, use_container_width=True)
 
     except Exception as e:
-        st.error(f"❌ Error rendering Recruiter ➝ Farm ➝ Retailer Sankey: {e}")
+        st.error(f"Error rendering Recruiter ➝ Farm ➝ Retailer Sankey: {e}")
 
 
+    # ---------- RETAILER DIVERSITY ----------
 with tab7:
     st.subheader("🛒 Retailer Diversity per Farm")
 
