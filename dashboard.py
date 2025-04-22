@@ -135,7 +135,7 @@ for css in custom_css:
 
 # Sidebar
 with st.sidebar:
-    st.image("block-m.png", width=100)
+    st.image("assets/block-m.png", width=100)
 
 # Title
 st.title("🧅 H-2A Job Order Explorer")
