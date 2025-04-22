@@ -11,6 +11,11 @@ import plotly.express as px
 import plotly.graph_objects as go
 from collections import Counter
 
+# Helpful sources:
+# https://www.geeksforgeeks.org/a-beginners-guide-to-streamlit/
+# https://www.datacamp.com/tutorial/streamlit
+# https://docs.streamlit.io/develop/tutorials
+
 # Secure API key
 API_KEY = st.secrets["api_key"]
 
@@ -24,7 +29,7 @@ st.set_page_config(
 MAIZE = "#FFCB05"
 BLUE = "#00274C"
 
-# Custom Styles
+# Custom Styling (ChatGPT assisted with this)
 custom_css = [
     """
     <style>
@@ -129,12 +134,12 @@ custom_css = [
     """
 ]
 
-
 for css in custom_css:
     st.markdown(css, unsafe_allow_html=True)
 
 # Sidebar
 with st.sidebar:
+    # Block M logo downloaded from Google (https://www.cleanpng.com/png-michigan-wolverines-football-university-of-michiga-1862561/3.html)
     st.image("assets/block-m.png", width=100)
 
 # Title
@@ -143,11 +148,14 @@ st.title("🧅 H-2A Job Order Explorer")
 # ---------- LOAD DATA ----------
 df = pd.read_csv("outputs/ONION-MASTER.csv")
 df.columns = df.columns.str.lower().str.replace(" ", "_")
-df = df.rename(columns={"best_address": "address", "recruiter_cleaned": "recruiter"})
-df = df.drop(columns=["person", "hit_or_no_hit", "has_facebook"], errors="ignore")
+df = df.rename(columns={"best_address": "address",
+               "recruiter_cleaned": "recruiter"})
+df = df.drop(columns=["person", "hit_or_no_hit",
+             "has_facebook"], errors="ignore")
 df["year"] = df["year"].astype(int)
 df["certainty"] = pd.to_numeric(df["certainty"], errors="coerce")
-df["recruiter"] = df["recruiter"].astype(str).str.replace(r"\s*-\s*\d+$", "", regex=True)
+df["recruiter"] = df["recruiter"].astype(
+    str).str.replace(r"\s*-\s*\d+$", "", regex=True)
 
 # ---------- FILTERS ----------
 with st.sidebar:
@@ -155,9 +163,11 @@ with st.sidebar:
     years = sorted(df["year"].dropna().unique())
     recruiters = sorted(df["recruiter"].dropna().unique())
     selected_years = st.multiselect("Select Year(s):", years, default=years)
-    selected_recruiters = st.multiselect("Select Recruiter(s):", recruiters, default=recruiters)
+    selected_recruiters = st.multiselect(
+        "Select Recruiter(s):", recruiters, default=recruiters)
 
-filtered_df = df[df["year"].isin(selected_years) & df["recruiter"].isin(selected_recruiters)]
+filtered_df = df[df["year"].isin(
+    selected_years) & df["recruiter"].isin(selected_recruiters)]
 
 # ---------- COLOR MAP ----------
 color_map = {
@@ -166,13 +176,14 @@ color_map = {
 }
 
 # ---------- TABS ----------
-tab1, tab2, tab3, tab4, tab5, tab6, tab7= st.tabs([
-    "🌍 Map", 
-    "📄 Table", 
-    "☁️ Retailers", 
-    "🌐 Network", 
-    "📊 Recruiters", 
-    "🔁 Sankey", 
+# https://evidence.dev/learn/streamlit-tabs
+tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
+    "🌍 Map",
+    "📄 Table",
+    "☁️ Retailers",
+    "🌐 Network",
+    "📊 Recruiters",
+    "🔁 Sankey",
     "🛒 Retail Diversity"
 ])
 
@@ -180,7 +191,8 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7= st.tabs([
 with tab1:
     st.markdown("### 🌍 Map of Employers")
 
-    m = folium.Map(location=[filtered_df["latitude"].mean(), filtered_df["longitude"].mean()], zoom_start=6)
+    m = folium.Map(location=[filtered_df["latitude"].mean(
+    ), filtered_df["longitude"].mean()], zoom_start=6)
     marker_cluster = MarkerCluster().add_to(m)
 
     for _, row in filtered_df.iterrows():
@@ -203,11 +215,12 @@ with tab2:
     st.subheader("📄 H-2A Orders Table")
 
     df_table = filtered_df.copy()
-    df_table["Link"] = df_table["link_to_h2a"].apply(lambda x: f'<a href="{x}" target="_blank">View Order</a>')
+    df_table["Link"] = df_table["link_to_h2a"].apply(
+        lambda x: f'<a href="{x}" target="_blank">View Order</a>')
     df_table = df_table.drop(columns=["link_to_h2a"])
     df_table.columns = df_table.columns.str.replace("_", " ").str.title()
 
-    # 👇 Interactive column selector with custom styling
+    # Interactive column selector with custom styling
     cols = st.multiselect(
         "Choose columns to display:",
         df_table.columns.tolist(),
@@ -215,9 +228,9 @@ with tab2:
     )
 
     st.markdown(
-    df_table[cols].to_html(escape=False, index=False),
-    unsafe_allow_html=True
-)
+        df_table[cols].to_html(escape=False, index=False),
+        unsafe_allow_html=True
+    )
 
 # ---------- WORD CLOUD ----------
 with tab3:
@@ -234,8 +247,10 @@ with tab3:
             return random.choice(maize_blue_colors)
 
         market_text = " ".join(df_raw["market"].dropna().astype(str).tolist())
-        market_text = re.sub(r"\([^)]*\)", "", market_text.replace("\n", ",").replace(";", ","))
-        retailers = [r.strip().replace(" ", "_") for r in market_text.split(",") if r.strip()]
+        market_text = re.sub(r"\([^)]*\)", "",
+                             market_text.replace("\n", ",").replace(";", ","))
+        retailers = [r.strip().replace(" ", "_")
+                     for r in market_text.split(",") if r.strip()]
         cleaned_text = " ".join(retailers)
 
         if not cleaned_text:
@@ -255,8 +270,8 @@ with tab3:
         st.pyplot(plt)
 
     except Exception:
-        #st.warning("No 'market' column found. Using fallback retailer list.")
-        fallback = ["Walmart", "Costco", "Kroger", "Meijer", "Publix", "Whole Foods", "HEB", "Sam's Club", "Trader Joe's", "Target"]
+        fallback = ["Walmart", "Costco", "Kroger", "Meijer", "Publix",
+                    "Whole Foods", "HEB", "Sam's Club", "Trader Joe's", "Target"]
         text = " ".join([r.replace(" ", "_") for r in fallback * 10])
 
         wordcloud = WordCloud(
@@ -272,6 +287,7 @@ with tab3:
         plt.axis("off")
         st.pyplot(plt)
 
+# ---------- NETWORK ----------
 with tab4:
     st.subheader("🌐 Farm–Retailer Network")
 
@@ -379,19 +395,22 @@ with tab4:
         fig.add_trace(go.Scatter(
             x=[None], y=[None],
             mode="markers",
-            marker=dict(size=10, color="#FFCB05", line=dict(width=1.5, color="black")),
+            marker=dict(size=10, color="#FFCB05",
+                        line=dict(width=1.5, color="black")),
             name="Farm"
         ))
         fig.add_trace(go.Scatter(
             x=[None], y=[None],
             mode="markers",
-            marker=dict(size=18, color="#00274C", line=dict(width=1.5, color="black")),
+            marker=dict(size=18, color="#00274C",
+                        line=dict(width=1.5, color="black")),
             name="Top Retailer"
         ))
         fig.add_trace(go.Scatter(
             x=[None], y=[None],
             mode="markers",
-            marker=dict(size=8, color="#A2C4E0", line=dict(width=1.5, color="black")),
+            marker=dict(size=8, color="#A2C4E0",
+                        line=dict(width=1.5, color="black")),
             name="Other Retailer"
         ))
 
@@ -413,7 +432,7 @@ with tab5:
         x="Recruiter",
         y="Orders",
         text="Orders",
-        color_discrete_sequence=["#00274C"],  # Michigan Blue
+        color_discrete_sequence=["#00274C"],
     )
 
     fig.update_traces(
@@ -423,32 +442,31 @@ with tab5:
     )
 
     fig.update_layout(
-    plot_bgcolor="white",
-    paper_bgcolor="white",
-    xaxis=dict(
-        tickangle=-45,
-        title=None,
-        tickfont=dict(color="black"),
-        showgrid=False,
-        linecolor="black",
-        ticks="outside"
-    ),
-    yaxis=dict(
-        title=dict(
-            text="Number of Retailers",
-            font=dict(color="black", size=14)
+        plot_bgcolor="white",
+        paper_bgcolor="white",
+        xaxis=dict(
+            tickangle=-45,
+            title=None,
+            tickfont=dict(color="black"),
+            showgrid=False,
+            linecolor="black",
+            ticks="outside"
         ),
-        tickfont=dict(color="black"),
-        showgrid=True,
-        gridcolor="#DDDDDD",
-        zeroline=False,
-        linecolor="black",
-        ticks="outside"
-    ),
-    margin=dict(l=40, r=20, t=40, b=120),
-    font=dict(color="black")
-)
-
+        yaxis=dict(
+            title=dict(
+                text="Number of Retailers",
+                font=dict(color="black", size=14)
+            ),
+            tickfont=dict(color="black"),
+            showgrid=True,
+            gridcolor="#DDDDDD",
+            zeroline=False,
+            linecolor="black",
+            ticks="outside"
+        ),
+        margin=dict(l=40, r=20, t=40, b=120),
+        font=dict(color="black")
+    )
 
     st.plotly_chart(fig, use_container_width=True)
 
@@ -461,11 +479,13 @@ with tab6:
         sankey_df = filtered_df[["recruiter", "farm"]].dropna()
 
         # Create unique list of nodes
-        all_nodes = list(pd.unique(sankey_df[["recruiter", "farm"]].values.ravel()))
+        all_nodes = list(
+            pd.unique(sankey_df[["recruiter", "farm"]].values.ravel()))
         node_indices = {name: i for i, name in enumerate(all_nodes)}
 
-        # Count recruiter → farm relationships
-        grouped_links = sankey_df.groupby(["recruiter", "farm"]).size().reset_index(name="count")
+        # Count recruiter to farm relationships
+        grouped_links = sankey_df.groupby(
+            ["recruiter", "farm"]).size().reset_index(name="count")
 
         sankey_data = go.Sankey(
             node=dict(
@@ -503,8 +523,10 @@ with tab6:
     st.subheader("🔀 Recruiter ➝ Farm ➝ Top Retailer Sankey Diagram")
 
     try:
-        filtered_df["recruiter_clean"] = filtered_df["recruiter"].str.replace(r"\s*-\s*\d+", "", regex=True)
-        sankey_data = filtered_df[["recruiter_clean", "farm", "market"]].dropna()
+        filtered_df["recruiter_clean"] = filtered_df["recruiter"].str.replace(
+            r"\s*-\s*\d+", "", regex=True)
+        sankey_data = filtered_df[[
+            "recruiter_clean", "farm", "market"]].dropna()
 
         sankey_edges = []
         all_retailers = []
@@ -520,9 +542,11 @@ with tab6:
                     sankey_edges.append((farm, cleaned))
                     all_retailers.append(cleaned)
 
-        top_retailers = set([r for r, _ in Counter(all_retailers).most_common(10)])
+        top_retailers = set(
+            [r for r, _ in Counter(all_retailers).most_common(10)])
 
-        sankey_edges = [edge for edge in sankey_edges if edge[1] in top_retailers or edge[0] in top_retailers]
+        sankey_edges = [edge for edge in sankey_edges if edge[1]
+                        in top_retailers or edge[0] in top_retailers]
 
         all_nodes = list(set([x for edge in sankey_edges for x in edge]))
         node_index = {name: i for i, name in enumerate(all_nodes)}
@@ -559,7 +583,6 @@ with tab6:
 
     except Exception as e:
         st.error(f"Error rendering Recruiter ➝ Farm ➝ Retailer Sankey: {e}")
-
 
     # ---------- RETAILER DIVERSITY ----------
 with tab7:
@@ -606,6 +629,5 @@ with tab7:
         st.plotly_chart(fig, use_container_width=True)
 
     else:
-        st.warning("Retailer count data not available. Please ensure 'retailer_count' column exists.")
-
-
+        st.warning(
+            "Retailer count data not available. Please ensure 'retailer_count' column exists.")
